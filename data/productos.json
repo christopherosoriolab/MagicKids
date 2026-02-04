@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "Toro Mecánico",
+    "precio": 120000,
+    "descripcion": "Toro mecánico ideal para fiestas y eventos.",
+    "imagen": "toro.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Castillo Inflable",
+    "precio": 80000,
+    "descripcion": "Castillo inflable para niños, seguro y divertido.",
+    "imagen": "castillo.jpg"
+  }
+]
