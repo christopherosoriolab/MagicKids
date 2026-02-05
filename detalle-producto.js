@@ -1,40 +1,38 @@
-const WHATSAPP_NEGOCIO = "56912345678";
-
-const params = new URLSearchParams(window.location.search);
-const idProducto = parseInt(params.get("id"));
+const WHATSAPP = "56912345678";
+const id = parseInt(new URLSearchParams(window.location.search).get("id"));
 
 fetch("data/productos.json")
   .then(res => res.json())
   .then(productos => {
-    const producto = productos.find(p => p.id === idProducto);
-    if (producto) cargarProducto(producto);
+    const p = productos.find(p => p.id === id);
+    if (p) cargar(p);
   });
 
-function cargarProducto(producto) {
-  document.getElementById("nombre").textContent = producto.nombre;
-  document.getElementById("precio").textContent = producto.precio;
-  document.getElementById("descripcion").textContent = producto.descripcion;
-  document.getElementById("medidas").textContent = producto.medidas;
+function cargar(p) {
+  document.getElementById("nombre").textContent = p.nombre;
+  document.getElementById("precio").textContent = p.precio;
+  document.getElementById("descripcion").textContent = p.descripcion;
 
-  const imgPrincipal = document.getElementById("imagen-principal");
-  imgPrincipal.src = `assents/imagenes/${producto.imagenes[0]}`;
+  const medidas = document.getElementById("medidas-container");
+  if (p.categoria === "Carritos") {
+    medidas.style.display = "none";
+  } else {
+    document.getElementById("medidas").textContent = p.medidas;
+  }
 
-  const miniaturas = document.getElementById("miniaturas");
-  miniaturas.innerHTML = "";
+  const principal = document.getElementById("imagen-principal");
+  principal.src = `assents/imagenes/${p.imagenes[0]}`;
 
-  producto.imagenes.forEach(img => {
-    const imagen = document.createElement("img");
-    imagen.src = `assents/imagenes/${img}`;
-    imagen.addEventListener("click", () => {
-      imgPrincipal.src = imagen.src;
-    });
-    miniaturas.appendChild(imagen);
+  const mini = document.getElementById("miniaturas");
+  mini.innerHTML = "";
+
+  p.imagenes.forEach(img => {
+    const i = document.createElement("img");
+    i.src = `assents/imagenes/${img}`;
+    i.onclick = () => principal.src = i.src;
+    mini.appendChild(i);
   });
-
-  const mensaje = encodeURIComponent(
-    `Hola, quiero cotizar el arriendo de: ${producto.nombre}`
-  );
 
   document.getElementById("btn-whatsapp").href =
-    `https://wa.me/${WHATSAPP_NEGOCIO}?text=${mensaje}`;
+    `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hola, quiero cotizar: " + p.nombre)}`;
 }

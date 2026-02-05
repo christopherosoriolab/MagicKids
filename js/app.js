@@ -4,41 +4,45 @@ fetch("data/productos.json")
   .then(res => res.json())
   .then(productos => {
     productosGlobal = productos;
-    mostrarProductos(productos);
+    aplicarFiltroURL();
   });
 
-function mostrarProductos(productos) {
+function aplicarFiltroURL() {
+  const params = new URLSearchParams(window.location.search);
+  const categoria = params.get("categoria");
+
+  if (!categoria) {
+    renderizar(productosGlobal);
+    return;
+  }
+
+  const filtrados = productosGlobal.filter(
+    p => p.categoria === categoria
+  );
+
+  renderizar(filtrados);
+}
+
+function renderizar(productos) {
   const contenedor = document.getElementById("lista-productos");
   contenedor.innerHTML = "";
 
-  productos.forEach(producto => {
+  productos.forEach(p => {
     const card = document.createElement("div");
-    card.classList.add("producto");
+    card.className = "producto";
 
     card.innerHTML = `
-      <img src="assents/imagenes/${producto.imagenes[0]}" alt="${producto.nombre}">
-      <h3>${producto.nombre}</h3>
-      <p>$${producto.precio}</p>
+      <div class="img-box">
+        <img src="assents/imagenes/${p.imagenes[0]}">
+      </div>
+      <h3>${p.nombre}</h3>
+      <p>$${p.precio}</p>
     `;
 
-    card.addEventListener("click", () => {
-      window.location.href = `detalle-producto.html?id=${producto.id}`;
-    });
+    card.onclick = () => {
+      location.href = `detalle-producto.html?id=${p.id}`;
+    };
 
     contenedor.appendChild(card);
   });
 }
-
-document.querySelectorAll("#filtros button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const categoria = btn.dataset.categoria;
-
-    if (categoria === "Todos") {
-      mostrarProductos(productosGlobal);
-    } else {
-      mostrarProductos(
-        productosGlobal.filter(p => p.categoria === categoria)
-      );
-    }
-  });
-});

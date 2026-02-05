@@ -1,38 +1,211 @@
 [
     {
     "id": 1,
-    "nombre": "Toro Mecánico",
-    "categoria": "Mecánicos",
-    "precio": 120000,
-    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
-    "medidas": "5m x 5m x 3m",
-    "imagenes": ["toro.jpg", "castillo.jpg", "toro.jpg"]
+    "nombre": "Tobogán acuático Palmera",
+    "categoria": "inflables",
+    "precio": 100000,
+    "descripcion": "askjdpakdpdsapodkjaopidjsaoijdasoikjdasoikjdaoijdaoijdiosajdioaoakdopakda",
+    "medidas": "4,5m Ancho x 5m Largo x 5m Alto",
+    "imagenes": ["acuatico-palmera1.jpg", "acuatico-palmera2.jpg", "acuatico-palmera3.jpg"]
     },
-
-
-
-
 
     {
     "id": 2,
-    "nombre": "carrooo",
-    "categoria": "Carritos",
-    "precio": 120000,
-    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
+    "nombre": "Tobogán acuático Sol",
+    "categoria": "inflables",
+    "precio": 100000,
+    "descripcion": "dsapojkdopiajdoiasjdoiajdpoisaj doisajhd oiajd oiasjsdoiajdopiashsd oias sd oiashdoi",
     "medidas": "5m x 5m x 3m",
-    "imagenes": ["toro.jpg", "castillo.jpg", "toro.jpg"]
+    "imagenes": ["acuatico-sol1.jpg", "acuatico-sol2.jpg", "acuatico-sol3.jpg"]
     },
-
 
     {
     "id": 3,
-    "nombre": "arcade",
-    "categoria": "Salon",
+    "nombre": "Tobogán Arco",
+    "categoria": "inflables",
+    "precio": 70000,
+    "descripcion": "dapkjsdoahjdñoiaj sdopihajdoi ahjspdo iashpodiahsdpoihapdoihas",
+    "medidas": "5m Ancho x 7m Largo x 5m Alto",
+    "imagenes": ["arco1.jpg", "arco2.jpg", "arco3.jpg"]
+    },
+
+    {
+    "id": 4,
+    "nombre": "Tobogán gigante Candy",
+    "categoria": "inflables",
+    "precio": 110000,
+    "descripcion": "das´kdoñaikjdoiaksjsd opsikajdoa ikjsdoa ijdoaijsdopaijsdoiasj",
+    "medidas": "5m Ancho x 10m Largo x 7m Alto",
+    "imagenes": ["candy1.jpg", "candy2.jpg", "candy3.jpg"]
+    },
+
+    {
+    "id": 5,
+    "nombre": "Tobogán Castillo",
+    "categoria": "inflables",
+    "precio": 70000,
+    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "medidas": "5m Ancho x 7m Largo x 6m Alto",
+    "imagenes": ["castillo1.jpg", "castillo2.jpg", "castillo3.jpg"]
+    },
+
+    {
+    "id": 6,
+    "nombre": "Tobogán acuático Danger",
+    "categoria": "inflables",
+    "precio": 80000,
+    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "medidas": "3m Ancho x 8m Largo x 4,5m Alto",
+    "imagenes": ["danger1.jpg", "danger2.jpg", "danger3.jpg"]
+    },
+
+    {
+    "id": 7,
+    "nombre": "Tobogán Pitufo",
+    "categoria": "inflables",
+    "precio": 70000,
+    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "medidas": "4m Ancho x 7m Largo x 7m Alto",
+    "imagenes": ["pitufo1.jpg", "pitufo2.jpg", "pitufo3.jpg"]
+    },
+
+    {
+    "id": 8,
+    "nombre": "Tobogán Payaso",
+    "categoria": "inflables",
+    "precio": 70000,
+    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "medidas": "5m Ancho x 5m Largo x 6m Alto",
+    "imagenes": ["payaso1.jpg", "payaso2.jpg", "payaso3.jpg"]
+    },
+
+    {
+    "id": 9,
+    "nombre": "Multiproposito Barco Pirata",
+    "categoria": "inflables",
+    "precio": 70000,
+    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "medidas": "7m Ancho x 5m Largo x 4m Alto",
+    "imagenes": ["pirata1.jpg", "pirata2.jpg", "pirata3.jpg"]
+    },
+
+    {
+    "id": 10,
+    "nombre": "Robot Gigante",
+    "categoria": "inflables",
+    "precio": 90000,
+    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "medidas": "6m Ancho x 8m Largo x 6m Alto",
+    "imagenes": ["robot1.jpg", "robot2.jpg", "robot3.jpg"]
+    },
+
+    {
+    "id": 11,
+    "nombre": "Tobogán Palmera",
+    "categoria": "inflables",
+    "precio": 60000,
+    "descripcion": "dlsakjdojashdsioansdpiouj ahspdoiujha podshaosui´dha",
+    "medidas": "4,5m Ancho x 5m Largo x 5m Alto",
+    "imagenes": ["palmera1.jpg", "palmera2.jpg", "palmera3.jpg"]
+    },
+
+    {
+    "id": 12,
+    "nombre": "Tobogán Sol",
+    "categoria": "inflables",
+    "precio": 60000,
+    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "medidas": "4,5m Ancho x 5m Largo x 6m Alto",
+    "imagenes": ["sol1.jpg", "sol2.jpg", "sol3.jpg"]
+    },
+
+
+
+
+
+
+    {
+    "id": 13,
+    "nombre": "Toro Mecánico",
+    "categoria": "mecanicos",
+    "precio": 150000,
+    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "medidas": "5m Ancho x 5m Largo x 3m Alto",
+    "imagenes": ["toro1.jpg", "toro2.jpg", "toro3.jpg"]
+    },
+
+    {
+    "id": 14,
+    "nombre": "Reloj Derribador",
+    "categoria": "mecanicos",
+    "precio": 140000,
+    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "medidas": "6mts de Diametro",
+    "imagenes": ["reloj1.jpg", "reloj2.jpg", "reloj3.jpg"]
+    },
+
+
+
+
+
+
+
+    {
+    "id": 15,
+    "nombre": "carro algodon y cabritas",
+    "categoria": "carros",
+    "precio": 95000,
+    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
+    "medidas": "5m x 5m x 3m",
+    "imagenes": ["carro-algodon-cabritas1.jpg", "carro-algodon-cabritas2.jpg", "carro-algodon-cabritas3.jpg"]
+    },
+
+    {
+    "id": 16,
+    "nombre": "carro gastronomico",
+    "categoria": "carros",
     "precio": 120000,
     "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
     "medidas": "5m x 5m x 3m",
-    "imagenes": ["toro.jpg", "castillo.jpg", "toro.jpg"]
+    "imagenes": ["carro-gastronomico1.jpg", "carro-gastronomico2.jpg", "carro-gastronomico3.jpg"]
+    },
+
+
+
+
+    {
+    "id": 17,
+    "nombre": "arcade",
+    "categoria": "interior",
+    "precio": 120000,
+    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
+    "medidas": "5m x 5m x 3m",
+    "imagenes": ["arcade1.jpg", "arcade2.jpg", "arcade3.jpg"]
+    },
+
+    {
+    "id": 18,
+    "nombre": "taca - taca",
+    "categoria": "interior",
+    "precio": 120000,
+    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
+    "medidas": "5m x 5m x 3m",
+    "imagenes": ["tacataca1.jpg", "tacataca2.jpg", "tacataca3.jpg"]
+    },
+
+    {
+    "id": 19,
+    "nombre": "mesa de hockey",
+    "categoria": "interior",
+    "precio": 120000,
+    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
+    "medidas": "5m x 5m x 3m",
+    "imagenes": ["hockey1.jpg", "hockey2.jpg", "hockey3.jpg"]
     }
+
+
+
+    
 
 
  

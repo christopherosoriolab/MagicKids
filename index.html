@@ -2,31 +2,41 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Arriendo de Juegos Inflables y Mecánicos | MagicKids</title>
-  <meta name="description" content="Arriendo de juegos inflables, toro mecánico, taca taca, mesas de aire y juegos para eventos y cumpleaños infantiles. Cotiza fácil por WhatsApp.">
-
+  <title>MagicKids | Juegos y Eventos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>MagicKids</h1>
-    <p>Arriendo de juegos inflables para eventos</p>
-  </header>
-  <h2 style="text-align:center;">Nuestro catálogo de juegos</h2>
-  
-  <section id="filtros">
-    <button data-categoria="Todos">Todos</button>
-    <button data-categoria="Inflables">Juegos Inflables</button>
-    <button data-categoria="Mecánicos">Juegos Mecánicos</button>
-    <button data-categoria="Salon">Juegos de Salón </button>
-    <button data-categoria="Carritos">Carritos Gastronomicos</button>
-  </section>
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html">
+      <img src="assents/logo.png" class="logo">
+    </a>
+  </div>
 
-  <main id="lista-productos"></main>
+  <nav class="nav-center">
+    <a href="index.html" class="nav-link">Inicio</a>
 
-  <script src="js/app.js"></script>
+    <div class="dropdown">
+      <span class="nav-link">Catálogo ▾</span>
+      <div class="dropdown-menu">
+        <a href="catalogo.html">Todos</a>
+        <a href="catalogo.html?categoria=inflables">Inflables</a>
+        <a href="catalogo.html?categoria=mecanicos">Mecánicos</a>
+        <a href="catalogo.html?categoria=interior">Juegos de Salón</a>
+        <a href="catalogo.html?categoria=carros">Carros Gastronómicos</a>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<section class="hero">
+  <h1>MagicKids Producciones</h1>
+  <p>Arriendo de juegos inflables, mecánicos y entretención para eventos</p>
+  <a href="catalogo.html" class="btn-principal">Ver Catálogo</a>
+</section>
+
 </body>
 </html>
