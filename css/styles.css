@@ -1,34 +1,241 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f5f5f5;
+/* =========================
+   RESET + BASE
+========================= */
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
 header {
-  background-color: #222;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
-#lista-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+header h1 {
+  margin: 0;
+  font-size: 42px;
 }
 
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* =========================
+   FILTROS
+========================= */
+#filtros {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  flex-wrap: wrap;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#filtros button {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  background: #eaeaea;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#filtros button:hover {
+  background: #2575fc;
+  color: white;
+}
+
+/* =========================
+   GRID PRODUCTOS
+========================= */
+#lista-productos {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* =========================
+   CARD PRODUCTO
+========================= */
 .producto {
   background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
 }
 
 .producto img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 10px;
+}
+
+.producto h3 {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.producto p {
+  margin: 0 15px 20px;
+  font-weight: bold;
+  color: #2575fc;
+  font-size: 18px;
+}
+
+/* =========================
+   BOTÓN WHATSAPP
+========================= */
+.btn-whatsapp {
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
+/* =========================
+   DETALLE PRODUCTO
+========================= */
+.volver {
+  display: inline-block;
+  margin: 20px;
+  font-weight: bold;
+  color: #2575fc;
+}
+
+.detalle-producto {
+  max-width: 1200px;
+  margin: 20px auto 60px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   IMÁGENES DETALLE
+========================= */
+.imagenes {
+  display: flex;
+  flex-direction: column;
+}
+
+#imagen-principal {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+#miniaturas {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+#miniaturas img {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#miniaturas img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* =========================
+   INFO DETALLE
+========================= */
+.info h1 {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+.info .precio {
+  font-size: 30px;
+  color: #2575fc;
+  margin: 20px 0;
+}
+
+.info p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.info strong {
+  color: #000;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .detalle-producto {
+    grid-template-columns: 1fr;
+  }
+
+  #imagen-principal {
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 30px;
+  }
+
+  .producto img {
+    height: 150px;
+  }
+
+  .info h1 {
+    font-size: 28px;
+  }
 }

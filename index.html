@@ -2,21 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Arriendo de Juegos</title>
+  <title>Arriendo de Juegos Inflables y Mecánicos | MagicKids</title>
+  <meta name="description" content="Arriendo de juegos inflables, toro mecánico, taca taca, mesas de aire y juegos para eventos y cumpleaños infantiles. Cotiza fácil por WhatsApp.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <header>
-    <h1>Arriendo de Juegos y Servicios</h1>
-    <p>Juegos inflables, mecánicos y carros de comida</p>
+    <h1>MagicKids</h1>
+    <p>Arriendo de juegos inflables para eventos</p>
   </header>
+  <h2 style="text-align:center;">Nuestro catálogo de juegos</h2>
+  
+  <section id="filtros">
+    <button data-categoria="Todos">Todos</button>
+    <button data-categoria="Inflables">Juegos Inflables</button>
+    <button data-categoria="Mecánicos">Juegos Mecánicos</button>
+    <button data-categoria="Salon">Juegos de Salón </button>
+    <button data-categoria="Carritos">Carritos Gastronomicos</button>
+  </section>
 
-  <main>
-    <section id="lista-productos">
-      <!-- Aquí JS va a cargar los productos -->
-    </section>
-  </main>
+  <main id="lista-productos"></main>
 
   <script src="js/app.js"></script>
 </body>
