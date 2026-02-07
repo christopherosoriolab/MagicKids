@@ -2,43 +2,452 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Catálogo | MagicKids</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo | MagicKids</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="navbar">
-  <div class="nav-left">
-    <a href="index.html">
-      <img src="assents/logo.png" class="logo">
-    </a>
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
   </div>
 
-  <nav class="nav-center">
-    <a href="index.html" class="nav-link">Inicio</a>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/56912345678" class="whatsapp-float" target="_blank">
+    <i>💬</i>
+  </a>
 
-    <div class="dropdown">
-      <span class="nav-link">Catálogo ▾</span>
-      <div class="dropdown-menu">
-        <a href="catalogo.html">Todos</a>
-        <a href="catalogo.html?categoria=inflables">Inflables</a>
-        <a href="catalogo.html?categoria=mecanicos">Mecánicos</a>
-        <a href="catalogo.html?categoria=interior">Juegos de Salón</a>
-        <a href="catalogo.html?categoria=carros">Carros Gastronómicos</a>
+  <!-- HEADER -->
+  <header class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="assents/imagenes/logo.png" alt="MagicKids Logo" class="logo">
+      </a>
+    </div>
+
+    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+
+    <nav class="nav-center" id="nav-center">
+      <a href="index.html" class="nav-link">Inicio</a>
+
+      <div class="dropdown" id="catalogo-dropdown">
+        <span class="nav-link dropdown-toggle">Catálogo ▾</span>
+        <div class="dropdown-menu">
+          <a href="catalogo.html">Todos los Productos</a>
+          <a href="catalogo.html?categoria=inflables">Juegos Inflables</a>
+          <a href="catalogo.html?categoria=mecanicos">Juegos Mecánicos</a>
+          <a href="catalogo.html?categoria=interior">Juegos de Salón</a>
+          <a href="catalogo.html?categoria=carros">Carros Gastronómicos</a>
+        </div>
+      </div>
+
+      <a href="quienes-somos.html" class="nav-link">Quiénes Somos</a>
+      <a href="eventos.html" class="nav-link">Mejores Eventos</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="https://wa.me/56912345678" class="btn-whatsapp" target="_blank">
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="detalle-hero">
+    <div class="container">
+      <div style="text-align: center;">
+        <h1>Nuestro Catálogo Completo</h1>
+        <p style="font-size: 1.2rem; margin-top: 1rem;">Encuentra el juego perfecto para tu evento</p>
       </div>
     </div>
-  </nav>
+  </section>
 
-</header>
+  <!-- CATÁLOGO SECTION -->
+  <section class="section productos-section">
+    <div class="container">
+      <div class="filtros-container">
+        <div class="filtros-grid">
+          <div class="filtro-group">
+            <label for="categoria">Categoría</label>
+            <select id="categoria">
+              <option value="">Todas las categorías</option>
+              <option value="inflables">Juegos Inflables</option>
+              <option value="mecanicos">Juegos Mecánicos</option>
+              <option value="interior">Juegos de Salón</option>
+              <option value="carros">Carros Gastronómicos</option>
+            </select>
+          </div>
+          <div class="filtro-group">
+            <label for="busqueda">Buscar</label>
+            <input type="text" id="busqueda" placeholder="Nombre del producto...">
+          </div>
+          <div class="filtro-group">
+            <label for="precio-min">Precio Mínimo</label>
+            <input type="number" id="precio-min" placeholder="Desde $">
+          </div>
+          <div class="filtro-group">
+            <label for="precio-max">Precio Máximo</label>
+            <input type="number" id="precio-max" placeholder="Hasta $">
+          </div>
+          <div class="filtro-group">
+            <button class="btn-filtrar" id="btn-filtrar">Filtrar</button>
+          </div>
+        </div>
+      </div>
 
-<section class="titulo">
-  <h2>Nuestro Catálogo</h2>
-  <p>Selecciona el juego ideal para tu evento</p>
-</section>
+      <div class="section-title">
+        <h2 id="titulo-catalogo">Todos los Productos</h2>
+        <p id="subtitulo-catalogo">Explora nuestra colección completa</p>
+      </div>
 
-<main id="lista-productos"></main>
+      <div id="lista-productos">
+        <!-- Se llenará con JavaScript -->
+      </div>
 
-<script src="js/app.js"></script>
+      <div id="sin-resultados" style="text-align: center; padding: 3rem; display: none;">
+        <h3>No se encontraron productos</h3>
+        <p style="color: var(--gray); margin-top: 1rem;">Intenta ajustar los filtros o buscar otro término</p>
+        <button class="btn btn-primary" style="margin-top: 1.5rem;" onclick="resetearFiltros()">Resetear Filtros</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>MagicKids</h3>
+          <p style="color: #cbd5e1; line-height: 1.8;">
+            Tu partner en entretenimiento para eventos. Calidad, seguridad y diversión garantizada.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Enlaces Rápidos</h3>
+          <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="quienes-somos.html">Quiénes Somos</a>
+            <a href="eventos.html">Mejores Eventos</a>
+            <a href="contacto.html">Contacto</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <div class="footer-contacto">
+            <p>📱 +56 9 6316 0639</p>
+            <p>✉️ contacto@magickids.cl</p>
+            <p>📍 Santiago, Chile</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MagicKids Producciones.</p>
+        <a href="https://wa.me/56937073605"> <p > BY CHRISTOPHER IGNACIO OSORIO</p></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ==============================
+    // VARIABLES GLOBALES
+    // ==============================
+    let productosGlobal = [];
+    const WHATSAPP = "56912345678";
+
+    // ==============================
+    // CARGAR PRODUCTOS AL INICIAR
+    // ==============================
+    document.addEventListener('DOMContentLoaded', () => {
+      // Ocultar loader después de 300ms
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) loader.classList.add('hidden');
+      }, 300);
+
+      // Cargar productos
+      fetch('data/productos.json')
+        .then(response => {
+          if (!response.ok) throw new Error('Error al cargar productos');
+          return response.json();
+        })
+        .then(productos => {
+          productosGlobal = productos;
+          aplicarFiltroURL();
+          configurarEventos();
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          mostrarError('No se pudieron cargar los productos');
+        });
+
+      // Configurar navbar y menú móvil
+      configurarNavbar();
+    });
+
+    // ==============================
+    // CONFIGURAR EVENTOS DE FILTROS
+    // ==============================
+    function configurarEventos() {
+      const btnFiltrar = document.getElementById('btn-filtrar');
+      const categoria = document.getElementById('categoria');
+      const busqueda = document.getElementById('busqueda');
+      const precioMin = document.getElementById('precio-min');
+      const precioMax = document.getElementById('precio-max');
+
+      if (btnFiltrar) {
+        btnFiltrar.addEventListener('click', aplicarFiltrosManuales);
+      }
+
+      if (categoria) {
+        categoria.addEventListener('change', aplicarFiltrosManuales);
+      }
+
+      if (busqueda) {
+        busqueda.addEventListener('keyup', (e) => {
+          if (e.key === 'Enter') aplicarFiltrosManuales();
+        });
+      }
+
+      if (precioMin) {
+        precioMin.addEventListener('change', aplicarFiltrosManuales);
+      }
+
+      if (precioMax) {
+        precioMax.addEventListener('change', aplicarFiltrosManuales);
+      }
+    }
+
+    // ==============================
+    // APLICAR FILTRO DESDE URL
+    // ==============================
+    function aplicarFiltroURL() {
+      const params = new URLSearchParams(window.location.search);
+      const categoria = params.get("categoria");
+
+      if (!categoria) {
+        actualizarTitulo('Todos los Productos', 'Explora nuestra colección completa');
+        renderizar(productosGlobal);
+        return;
+      }
+
+      const nombreCategoria = {
+        'inflables': 'Juegos Inflables',
+        'mecanicos': 'Juegos Mecánicos',
+        'interior': 'Juegos de Salón',
+        'carros': 'Carros Gastronómicos'
+      }[categoria] || 'Productos';
+
+      const descripcionCategoria = {
+        'inflables': 'Toboganes, castillos y juegos inflables para todas las edades',
+        'mecanicos': 'Juegos mecánicos emocionantes para tu evento',
+        'interior': 'Entretenimiento para espacios cerrados',
+        'carros': 'Carros gastronómicos para deleitar a tus invitados'
+      }[categoria] || 'Nuestra selección de productos';
+
+      actualizarTitulo(nombreCategoria, descripcionCategoria);
+
+      const filtrados = productosGlobal.filter(p => p.categoria === categoria);
+      renderizar(filtrados);
+    }
+
+    // ==============================
+    // APLICAR FILTROS MANUALES
+    // ==============================
+    function aplicarFiltrosManuales() {
+      const categoria = document.getElementById('categoria')?.value || '';
+      const busqueda = document.getElementById('busqueda')?.value.toLowerCase() || '';
+      const precioMin = document.getElementById('precio-min')?.value || '';
+      const precioMax = document.getElementById('precio-max')?.value || '';
+
+      let filtrados = [...productosGlobal];
+
+      // Filtro por categoría
+      if (categoria) {
+        filtrados = filtrados.filter(p => p.categoria === categoria);
+      }
+
+      // Filtro por búsqueda
+      if (busqueda) {
+        filtrados = filtrados.filter(p => 
+          p.nombre.toLowerCase().includes(busqueda) ||
+          p.descripcion.toLowerCase().includes(busqueda)
+        );
+      }
+
+      // Filtro por precio mínimo
+      if (precioMin) {
+        filtrados = filtrados.filter(p => p.precio >= parseInt(precioMin));
+      }
+
+      // Filtro por precio máximo
+      if (precioMax) {
+        filtrados = filtrados.filter(p => p.precio <= parseInt(precioMax));
+      }
+
+      // Actualizar título
+      if (categoria || busqueda || precioMin || precioMax) {
+        actualizarTitulo('Resultados de Búsqueda', `${filtrados.length} productos encontrados`);
+      } else {
+        actualizarTitulo('Todos los Productos', 'Explora nuestra colección completa');
+      }
+
+      renderizar(filtrados);
+    }
+
+    // ==============================
+    // ACTUALIZAR TÍTULO Y SUBTÍTULO
+    // ==============================
+    function actualizarTitulo(titulo, subtitulo) {
+      const tituloEl = document.getElementById('titulo-catalogo');
+      const subtituloEl = document.getElementById('subtitulo-catalogo');
+      
+      if (tituloEl) tituloEl.textContent = titulo;
+      if (subtituloEl) subtituloEl.textContent = subtitulo;
+    }
+
+    // ==============================
+    // RENDERIZAR PRODUCTOS
+    // ==============================
+    function renderizar(productos) {
+      const contenedor = document.getElementById("lista-productos");
+      const sinResultados = document.getElementById("sin-resultados");
+
+      if (!contenedor) return;
+
+      // Mostrar u ocultar mensaje de sin resultados
+      if (sinResultados) {
+        sinResultados.style.display = productos.length === 0 ? 'block' : 'none';
+      }
+
+      contenedor.innerHTML = "";
+
+      if (productos.length === 0) {
+        contenedor.innerHTML = '<p style="text-align: center; padding: 2rem; color: var(--gray);">No hay productos para mostrar.</p>';
+        return;
+      }
+
+      productos.forEach(p => {
+        // Verificar disponibilidad (por defecto true si no existe el campo)
+        const disponible = p.disponible !== false && p.disponible !== undefined ? p.disponible : true;
+
+        // Clases y textos para badges
+        const badgeClass = disponible 
+          ? {
+              'inflables': 'badge-inflables',
+              'mecanicos': 'badge-mecanicos',
+              'interior': 'badge-interior',
+              'carros': 'badge-carros'
+            }[p.categoria] || 'badge-inflables'
+          : 'badge-no-disponible';
+
+        const badgeText = disponible
+          ? {
+              'inflables': '🎈 Inflable',
+              'mecanicos': '🎢 Mecánico',
+              'interior': '🎮 Interior',
+              'carros': '🍔 Gastronómico'
+            }[p.categoria] || 'Producto'
+          : '❌ NO DISPONIBLE';
+
+        const card = document.createElement("div");
+        card.className = `producto ${disponible ? '' : 'producto-no-disponible'}`;
+        
+        card.innerHTML = `
+          <div class="img-box">
+            <span class="producto-badge ${badgeClass}">${badgeText}</span>
+            <img src="assents/imagenes/${p.imagenes[0]}" alt="${p.nombre}">
+          </div>
+          <div class="producto-info">
+            <h3>${p.nombre}</h3>
+            <p>$${p.precio.toLocaleString('es-CL')}</p>
+          </div>
+        `;
+
+        // Solo permitir clic si está disponible
+        if (disponible) {
+          card.onclick = () => {
+            window.location.href = `detalle-producto.html?id=${p.id}`;
+          };
+        }
+
+        contenedor.appendChild(card);
+      });
+    }
+
+    // ==============================
+    // RESETAR FILTROS
+    // ==============================
+    function resetearFiltros() {
+      if (document.getElementById('categoria')) document.getElementById('categoria').value = '';
+      if (document.getElementById('busqueda')) document.getElementById('busqueda').value = '';
+      if (document.getElementById('precio-min')) document.getElementById('precio-min').value = '';
+      if (document.getElementById('precio-max')) document.getElementById('precio-max').value = '';
+      
+      // Resetear URL
+      window.history.pushState({}, '', 'catalogo.html');
+      
+      // Volver a cargar todos los productos
+      actualizarTitulo('Todos los Productos', 'Explora nuestra colección completa');
+      renderizar(productosGlobal);
+    }
+
+    // ==============================
+    // MOSTRAR ERROR
+    // ==============================
+    function mostrarError(mensaje) {
+      const contenedor = document.getElementById("lista-productos");
+      if (contenedor) {
+        contenedor.innerHTML = `
+          <div style="text-align: center; padding: 3rem; background: white; border-radius: 16px; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
+            <h3 style="color: var(--danger); margin-bottom: 1rem;">Error</h3>
+            <p style="color: var(--gray); margin-bottom: 1.5rem;">${mensaje}</p>
+            <button class="btn btn-primary" onclick="location.reload()">Recargar Página</button>
+          </div>
+        `;
+      }
+    }
+
+    // ==============================
+    // CONFIGURAR NAVBAR
+    // ==============================
+    function configurarNavbar() {
+      // Efecto scroll navbar
+      window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+          navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }
+      });
+
+      // Menú móvil
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const navCenter = document.getElementById('nav-center');
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+      if (mobileMenuBtn && navCenter) {
+        mobileMenuBtn.addEventListener('click', () => {
+          navCenter.classList.toggle('active');
+          mobileMenuBtn.textContent = navCenter.classList.contains('active') ? '✕' : '☰';
+        });
+      }
+
+      if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            document.querySelector('.dropdown').classList.toggle('active');
+          }
+        });
+      }
+    }
+  </script>
 </body>
 </html>

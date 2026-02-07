@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "Cumpleaños Lucas - Tobogán Palmera",
+    "tipo": "cumpleanos",
+    "descripcion": "Increíble fiesta infantil con tobogán acuático Palmera. Los niños lo pasaron genial durante toda la tarde con juegos y actividades.",
+    "fecha": "2026-01-15",
+    "imagenes": ["evento1.jpg"],
+    "ubicacion": "Parque Forestal, Santiago"
+  },
+  {
+    "id": 2,
+    "nombre": "Festival Corporativo TechCorp",
+    "tipo": "corporativo",
+    "descripcion": "Evento corporativo con toro mecánico y juegos inflables para empleados y sus familias. Un día de team building inolvidable.",
+    "fecha": "2026-01-20",
+    "imagenes": ["evento2.jpg"],
+    "ubicacion": "Centro de Eventos Santiago"
+  },
+  {
+    "id": 3,
+    "nombre": "Feria Comunitaria La Florida",
+    "tipo": "festival",
+    "descripcion": "Feria vecinal con múltiples juegos inflables y carros gastronómicos. Cientos de familias disfrutaron de un día completo de entretenimiento.",
+    "fecha": "2026-01-25",
+    "imagenes": ["evento3.jpg"],
+    "ubicacion": "Plaza La Florida"
+  },
+  {
+    "id": 4,
+    "nombre": "Baby Shower Mariana",
+    "tipo": "familiar",
+    "descripcion": "Baby shower íntimo con castillo inflable temático para niños mientras los adultos celebraban. Una organización perfecta y sin contratiempos.",
+    "fecha": "2026-02-01",
+    "imagenes": ["evento4.jpg"],
+    "ubicacion": "Casa Particular, Las Condes"
+  },
+  {
+    "id": 5,
+    "nombre": "Cumpleaños Sofía - Castillo Pirata",
+    "tipo": "cumpleanos",
+    "descripcion": "Fiesta de cumpleaños con castillo inflable Barco Pirata y tobogán. Los niños vivieron una aventura pirata inolvidable.",
+    "fecha": "2026-02-05",
+    "imagenes": ["evento5.jpg"],
+    "ubicacion": "Jardín Infantil Santiago"
+  },
+  {
+    "id": 6,
+    "nombre": "Team Building Empresa XYZ",
+    "tipo": "corporativo",
+    "descripcion": "Jornada de team building con juegos mecánicos y actividades interactivas. Excelente para fortalecer lazos entre equipos de trabajo.",
+    "fecha": "2026-02-10",
+    "imagenes": ["evento6.jpg"],
+    "ubicacion": "Hotel Santiago Centro"
+  },
+  {
+    "id": 7,
+    "nombre": "Festival Cultural Providencia",
+    "tipo": "festival",
+    "descripcion": "Festival cultural con zona infantil completa: inflables, mecánicos y gastronomía. Un evento que reunió a toda la comunidad.",
+    "fecha": "2026-02-15",
+    "imagenes": ["evento7.jpg"],
+    "ubicacion": "Parque Providencia"
+  },
+  {
+    "id": 8,
+    "nombre": "Bautizo Mateo",
+    "tipo": "familiar",
+    "descripcion": "Celebración familiar con juegos inflables para los niños mientras los adultos celebraban. Perfecto para mantener a los pequeños entretenidos.",
+    "fecha": "2026-02-20",
+    "imagenes": ["evento8.jpg"],
+    "ubicacion": "Salón de Eventos Vitacura"
+  }
+]

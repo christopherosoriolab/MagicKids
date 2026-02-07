@@ -1,212 +1,173 @@
 [
-    {
+  {
     "id": 1,
     "nombre": "Tobogán acuático Palmera",
     "categoria": "inflables",
     "precio": 100000,
-    "descripcion": "askjdpakdpdsapodkjaopidjsaoijdasoikjdasoikjdaoijdaoijdiosajdioaoakdopakda",
+    "descripcion": "Tobogán acuático temático con diseño de palmera. Ideal para días calurosos y eventos al aire libre. Duración de 5 horas.",
     "medidas": "4,5m Ancho x 5m Largo x 5m Alto",
     "imagenes": ["acuatico-palmera1.jpg", "acuatico-palmera2.jpg", "acuatico-palmera3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 2,
     "nombre": "Tobogán acuático Sol",
     "categoria": "inflables",
     "precio": 100000,
-    "descripcion": "dsapojkdopiajdoiasjdoiajdpoisaj doisajhd oiajd oiasjsdoiajdopiashsd oias sd oiashdoi",
-    "medidas": "5m x 5m x 3m",
+    "descripcion": "Divertido tobogán acuático con diseño de sol sonriente. Perfecto para fiestas infantiles y eventos familiares durante el verano. Duración de 5 horas.",
+    "medidas": "5m Ancho x 5m Largo x 3m Alto",
     "imagenes": ["acuatico-sol1.jpg", "acuatico-sol2.jpg", "acuatico-sol3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 3,
     "nombre": "Tobogán Arco",
     "categoria": "inflables",
     "precio": 70000,
-    "descripcion": "dapkjsdoahjdñoiaj sdopihajdoi ahjspdo iashpodiahsdpoihapdoihas",
+    "descripcion": "Clásico tobogán con arco de colores vibrantes. Seguro y resistente para horas de diversión garantizada. Duración de 5 horas.",
     "medidas": "5m Ancho x 7m Largo x 5m Alto",
     "imagenes": ["arco1.jpg", "arco2.jpg", "arco3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 4,
     "nombre": "Tobogán gigante Candy",
     "categoria": "inflables",
     "precio": 110000,
-    "descripcion": "das´kdoñaikjdoiaksjsd opsikajdoa ikjsdoa ijdoaijsdopaijsdoiasj",
+    "descripcion": "¡El tobogán más grande de nuestra colección! Diseño temático de dulces y colores vibrantes. Ideal para eventos grandes. Duración de 5 horas.",
     "medidas": "5m Ancho x 10m Largo x 7m Alto",
     "imagenes": ["candy1.jpg", "candy2.jpg", "candy3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 5,
     "nombre": "Tobogán Castillo",
     "categoria": "inflables",
     "precio": 70000,
-    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "descripcion": "Castillo inflable con tobogán integrado. Diseño que transporta a los niños a un mundo de fantasía y aventura. Duración de 5 horas.",
     "medidas": "5m Ancho x 7m Largo x 6m Alto",
     "imagenes": ["castillo1.jpg", "castillo2.jpg", "castillo3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 6,
     "nombre": "Tobogán acuático Danger",
     "categoria": "inflables",
     "precio": 80000,
-    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "descripcion": "Tobogán acuático de estilo extremo con rampas y curvas emocionantes. Para los más aventureros. Duración de 5 horas.",
     "medidas": "3m Ancho x 8m Largo x 4,5m Alto",
     "imagenes": ["danger1.jpg", "danger2.jpg", "danger3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 7,
     "nombre": "Tobogán Pitufo",
     "categoria": "inflables",
     "precio": 70000,
-    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "descripcion": "Encantador tobogán temático de Los Pitufos. Diseño colorido y seguro para los más pequeños. Duración de 5 horas.",
     "medidas": "4m Ancho x 7m Largo x 7m Alto",
     "imagenes": ["pitufo1.jpg", "pitufo2.jpg", "pitufo3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 8,
     "nombre": "Tobogán Payaso",
     "categoria": "inflables",
     "precio": 70000,
-    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "descripcion": "Alegre tobogán con diseño de payaso sonriente. Siempre un éxito en cumpleaños infantiles. Duración de 5 horas.",
     "medidas": "5m Ancho x 5m Largo x 6m Alto",
     "imagenes": ["payaso1.jpg", "payaso2.jpg", "payaso3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 9,
-    "nombre": "Multiproposito Barco Pirata",
+    "nombre": "Multipropósito Barco Pirata",
     "categoria": "inflables",
     "precio": 70000,
-    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "descripcion": "Castillo inflable con temática de piratas. Incluye tobogán, obstáculos y zona de salto. ¡Una aventura épica para los niños!. Duración de 5 horas.",
     "medidas": "7m Ancho x 5m Largo x 4m Alto",
     "imagenes": ["pirata1.jpg", "pirata2.jpg", "pirata3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 10,
     "nombre": "Robot Gigante",
     "categoria": "inflables",
     "precio": 90000,
-    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "descripcion": "Impresionante robot inflable de 6 metros de altura. Diseño futurista que cautiva a niños y adultos por igual. Duración de 5 horas.",
     "medidas": "6m Ancho x 8m Largo x 6m Alto",
     "imagenes": ["robot1.jpg", "robot2.jpg", "robot3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 11,
     "nombre": "Tobogán Palmera",
     "categoria": "inflables",
     "precio": 60000,
-    "descripcion": "dlsakjdojashdsioansdpiouj ahspdoiujha podshaosui´dha",
+    "descripcion": "Tobogán seco con diseño tropical de palmera. Perfecto para eventos en espacios cerrados o días sin agua. Duración de 5 horas.",
     "medidas": "4,5m Ancho x 5m Largo x 5m Alto",
     "imagenes": ["palmera1.jpg", "palmera2.jpg", "palmera3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 12,
     "nombre": "Tobogán Sol",
     "categoria": "inflables",
     "precio": 60000,
-    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
+    "descripcion": "Tobogán clásico con diseño de sol radiante. Simple, seguro y siempre divertido. Duración de 5 horas.",
     "medidas": "4,5m Ancho x 5m Largo x 6m Alto",
     "imagenes": ["sol1.jpg", "sol2.jpg", "sol3.jpg"]
-    },
-
-
-
-
-
-
-    {
+  },
+  {
     "id": 13,
     "nombre": "Toro Mecánico",
     "categoria": "mecanicos",
     "precio": 150000,
-    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
-    "medidas": "5m Ancho x 5m Largo x 3m Alto",
+    "descripcion": "¡El rey de los juegos mecánicos! Toro mecánico profesional con control de velocidad y seguridad certificada. Incluye operador capacitado. Duración de 5 horas.",
+    "medidas": "5m Diámetro (área de seguridad)",
     "imagenes": ["toro1.jpg", "toro2.jpg", "toro3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 14,
     "nombre": "Reloj Derribador",
     "categoria": "mecanicos",
     "precio": 140000,
-    "descripcion": "das´kd{poakdpaok dpoakdsp aojsdpao jsdopasijdoasijdaosikjdsa",
-    "medidas": "6mts de Diametro",
+    "descripcion": "Clásico juego de habilidad donde los niños intentan no caer por las agujas del reloj. ¡Muy competitivo y entretenido!. Duración de 3 horas.",
+    "medidas": "2m Ancho x 1m Profundo x 2,5m Alto",
     "imagenes": ["reloj1.jpg", "reloj2.jpg", "reloj3.jpg"]
-    },
-
-
-
-
-
-
-
-    {
+  },
+  {
     "id": 15,
-    "nombre": "carro algodon y cabritas",
+    "nombre": "Carro Algodón de Azúcar y Palomitas",
     "categoria": "carros",
     "precio": 95000,
-    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
-    "medidas": "5m x 5m x 3m",
+    "descripcion": "Carro gastronómico completo para preparar algodón de azúcar y palomitas frescas. Incluye operador y materiales por 4 horas.",
+    "medidas": "1,5m x 1m x 1,8m",
     "imagenes": ["carro-algodon-cabritas1.jpg", "carro-algodon-cabritas2.jpg", "carro-algodon-cabritas3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 16,
-    "nombre": "carro gastronomico",
+    "nombre": "Carro Gastronómico",
     "categoria": "carros",
     "precio": 120000,
-    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
-    "medidas": "5m x 5m x 3m",
+    "descripcion": "Carro gourmet versátil para servir; HotDogs, Completos, Hamburguesas y mas. Estructura elegante con toldo y mostrador de servicio. Duración de 4 horas.",
+    "medidas": "2m x 1,2m x 2m",
     "imagenes": ["carro-gastronomico1.jpg", "carro-gastronomico2.jpg", "carro-gastronomico3.jpg"]
-    },
-
-
-
-
-    {
+  },
+  {
     "id": 17,
-    "nombre": "arcade",
+    "nombre": "Máquina Arcade Clásica",
     "categoria": "interior",
-    "precio": 120000,
-    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
-    "medidas": "5m x 5m x 3m",
+    "precio": 80000,
+    "descripcion": "Arcade retro con mas de 1.000 juegos clásicos incluidos (Pac-Man, Donkey Kong, Street Fighter y más). Ideal para eventos indoor. Duración de 5 horas.",
+    "medidas": "0,8m Ancho x 0,7m Profundo x 1,8m Alto",
     "imagenes": ["arcade1.jpg", "arcade2.jpg", "arcade3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 18,
-    "nombre": "taca - taca",
+    "nombre": "Mesa Taca-Taca Profesional",
     "categoria": "interior",
-    "precio": 120000,
-    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
-    "medidas": "5m x 5m x 3m",
+    "precio": 75000,
+    "descripcion": "Mesa de fútbol de salón profesional con diseño moderno y jugadores suaves. Para partidos emocionantes en cualquier evento. Duración de 5 horas.",
+    "medidas": "1,5m Largo x 0,8m Ancho x 0,9m Alto",
     "imagenes": ["tacataca1.jpg", "tacataca2.jpg", "tacataca3.jpg"]
-    },
-
-    {
+  },
+  {
     "id": 19,
-    "nombre": "mesa de hockey",
+    "nombre": "Mesa de Hockey de Salón",
     "categoria": "interior",
-    "precio": 120000,
-    "descripcion": "Toro mecánico ideal para eventos y cumpleaños.",
-    "medidas": "5m x 5m x 3m",
+    "precio": 70000,
+    "descripcion": "Mesa de aire hockey con diseño profesional. Dos jugadores compiten por anotar goles en esta emocionante mesa de juego. Duración de 5 horas.",
+    "medidas": "1,4m Largo x 0,75m Ancho x 0,85m Alto",
     "imagenes": ["hockey1.jpg", "hockey2.jpg", "hockey3.jpg"]
-    }
-
-
-
-    
-
-
- 
+  }
 ]

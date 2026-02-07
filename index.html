@@ -2,41 +2,420 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>MagicKids | Juegos y Eventos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MagicKids | Juegos y Eventos</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="navbar">
-  <div class="nav-left">
-    <a href="index.html">
-      <img src="assents/logo.png" class="logo">
-    </a>
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
   </div>
 
-  <nav class="nav-center">
-    <a href="index.html" class="nav-link">Inicio</a>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/56912345678" class="whatsapp-float" target="_blank">
+    <i>💬</i>
+  </a>
 
-    <div class="dropdown">
-      <span class="nav-link">Catálogo ▾</span>
-      <div class="dropdown-menu">
-        <a href="catalogo.html">Todos</a>
-        <a href="catalogo.html?categoria=inflables">Inflables</a>
-        <a href="catalogo.html?categoria=mecanicos">Mecánicos</a>
-        <a href="catalogo.html?categoria=interior">Juegos de Salón</a>
-        <a href="catalogo.html?categoria=carros">Carros Gastronómicos</a>
+  <!-- HEADER -->
+  <header class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="assents/imagenes/logo.png" alt="MagicKids Logo" class="logo">
+      </a>
+    </div>
+
+    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+
+    <nav class="nav-center" id="nav-center">
+      <a href="index.html" class="nav-link">Inicio</a>
+
+      <div class="dropdown" id="catalogo-dropdown">
+        <span class="nav-link dropdown-toggle">Catálogo ▾</span>
+        <div class="dropdown-menu">
+          <a href="catalogo.html">Todos los Productos</a>
+          <a href="catalogo.html?categoria=inflables">Juegos Inflables</a>
+          <a href="catalogo.html?categoria=mecanicos">Juegos Mecánicos</a>
+          <a href="catalogo.html?categoria=interior">Juegos de Salón</a>
+          <a href="catalogo.html?categoria=carros">Carros Gastronómicos</a>
+        </div>
+      </div>
+
+      <a href="quienes-somos.html" class="nav-link">Quiénes Somos</a>
+      <a href="eventos.html" class="nav-link">Mejores Eventos</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="https://wa.me/56912345678" class="btn-whatsapp" target="_blank">
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>MagicKids Producciones</h1>
+    <p>Arriendo de juegos inflables, mecánicos y entretención para eventos inolvidables</p>
+    <div class="hero-buttons">
+      <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+      <a href="contacto.html" class="btn btn-outline">Contáctanos</a>
+    </div>
+  </section>
+
+  <!-- DESTACADOS SECTION -->
+  <section class="section destacados">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nuestros Productos Destacados</h2>
+        <p>Descubre nuestra selección de juegos más populares</p>
+      </div>
+      <div class="destacados-grid" id="destacados-grid">
+        <!-- Se llenará con JavaScript -->
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="catalogo.html" class="btn btn-secondary">Ver Todos los Productos</a>
       </div>
     </div>
-  </nav>
+  </section>
 
-</header>
+  <!-- CATEGORÍAS SECTION -->
+  <section class="section categorias">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nuestras Categorías</h2>
+        <p>Explora todos nuestros servicios por categoría</p>
+      </div>
+      <div class="categorias-grid">
+        <div class="categoria-card inflables" onclick="window.location.href='catalogo.html?categoria=inflables'">
+          <div class="categoria-icon">🎈</div>
+          <h3>Juegos Inflables</h3>
+          <p>Toboganes, castillos y más</p>
+        </div>
+        <div class="categoria-card mecanicos" onclick="window.location.href='catalogo.html?categoria=mecanicos'">
+          <div class="categoria-icon">🎢</div>
+          <h3>Juegos Mecánicos</h3>
+          <p>Toro mecánico, reloj derribador</p>
+        </div>
+        <div class="categoria-card interior" onclick="window.location.href='catalogo.html?categoria=interior'">
+          <div class="categoria-icon">🎮</div>
+          <h3>Juegos de Salón</h3>
+          <p>Arcade, taca-taca, hockey</p>
+        </div>
+        <div class="categoria-card carros" onclick="window.location.href='catalogo.html?categoria=carros'">
+          <div class="categoria-icon">🍔</div>
+          <h3>Carros Gastronómicos</h3>
+          <p>Algodón de azúcar, cabritas</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="hero">
-  <h1>MagicKids Producciones</h1>
-  <p>Arriendo de juegos inflables, mecánicos y entretención para eventos</p>
-  <a href="catalogo.html" class="btn-principal">Ver Catálogo</a>
-</section>
+  <!-- EVENTOS PREVIEW -->
+  <section class="section eventos-preview">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nuestros Mejores Eventos</h2>
+        <p>Mira algunos de los eventos que hemos hecho realidad</p>
+      </div>
+      
+      <div id="eventos-preview-grid" class="eventos-grid">
+        <!-- Loading skeleton -->
+        <div class="evento-card" style="background: linear-gradient(135deg, #dbeafe, #bfdbfe);">
+          <div style="height: 250px; background: #94a3b8;"></div>
+          <div style="padding: 24px;">
+            <div style="background: #94a3b8; height: 24px; width: 60%; border-radius: 8px; margin-bottom: 12px;"></div>
+            <div style="background: #cbd5e1; height: 16px; width: 40%; border-radius: 8px; margin-bottom: 16px;"></div>
+            <div style="background: #cbd5e1; height: 14px; width: 100%; border-radius: 8px; margin-bottom: 8px;"></div>
+            <div style="background: #cbd5e1; height: 14px; width: 80%; border-radius: 8px;"></div>
+          </div>
+        </div>
+        <div class="evento-card" style="background: linear-gradient(135deg, #ffedd5, #fed7aa);">
+          <div style="height: 250px; background: #94a3b8;"></div>
+          <div style="padding: 24px;">
+            <div style="background: #94a3b8; height: 24px; width: 60%; border-radius: 8px; margin-bottom: 12px;"></div>
+            <div style="background: #cbd5e1; height: 16px; width: 40%; border-radius: 8px; margin-bottom: 16px;"></div>
+            <div style="background: #cbd5e1; height: 14px; width: 100%; border-radius: 8px; margin-bottom: 8px;"></div>
+            <div style="background: #cbd5e1; height: 14px; width: 80%; border-radius: 8px;"></div>
+          </div>
+        </div>
+        <div class="evento-card" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">
+          <div style="height: 250px; background: #94a3b8;"></div>
+          <div style="padding: 24px;">
+            <div style="background: #94a3b8; height: 24px; width: 60%; border-radius: 8px; margin-bottom: 12px;"></div>
+            <div style="background: #cbd5e1; height: 16px; width: 40%; border-radius: 8px; margin-bottom: 16px;"></div>
+            <div style="background: #cbd5e1; height: 14px; width: 100%; border-radius: 8px; margin-bottom: 8px;"></div>
+            <div style="background: #cbd5e1; height: 14px; width: 80%; border-radius: 8px;"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="eventos.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+          Ver Todos los Eventos →
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>MagicKids</h3>
+          <p style="color: #cbd5e1; line-height: 1.8;">
+            Tu partner en entretenimiento para eventos. Calidad, seguridad y diversión garantizada.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Enlaces Rápidos</h3>
+          <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="quienes-somos.html">Quiénes Somos</a>
+            <a href="eventos.html">Mejores Eventos</a>
+            <a href="contacto.html">Contacto</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <div class="footer-contacto">
+            <p>📱 +56 9 6316 0639</p>
+            <p>✉️ contacto@magickids.cl</p>
+            <p>📍 Santiago, Chile</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MagicKids Producciones.</p>
+        <a href="https://wa.me/56937073605"> <p > BY CHRISTOPHER IGNACIO OSORIO</p></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').classList.add('hidden');
+      }, 300);
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navCenter = document.getElementById('nav-center');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+    if (mobileMenuBtn && navCenter) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navCenter.classList.toggle('active');
+        mobileMenuBtn.textContent = navCenter.classList.contains('active') ? '✕' : '☰';
+      });
+    }
+
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          document.querySelector('.dropdown').classList.toggle('active');
+        }
+      });
+    }
+
+    // Cargar productos destacados
+    fetch('data/productos.json')
+      .then(res => res.json())
+      .then(productos => {
+        const destacadosGrid = document.getElementById('destacados-grid');
+        const destacados = productos.slice(0, 4);
+        
+        destacados.forEach(p => {
+          const badgeClass = {
+            'inflables': 'badge-inflables',
+            'mecanicos': 'badge-mecanicos',
+            'interior': 'badge-interior',
+            'carros': 'badge-carros'
+          }[p.categoria] || 'badge-inflables';
+
+          const badgeText = {
+            'inflables': '🎈 Inflable',
+            'mecanicos': '🎢 Mecánico',
+            'interior': '🎮 Interior',
+            'carros': '🍔 Gastronómico'
+          }[p.categoria] || 'Producto';
+
+          const card = document.createElement('div');
+          card.className = 'producto';
+          card.innerHTML = `
+            <div class="img-box">
+              <span class="producto-badge ${badgeClass}">${badgeText}</span>
+              <img src="assents/imagenes/${p.imagenes[0]}" alt="${p.nombre}">
+            </div>
+            <div class="producto-info">
+              <h3>${p.nombre}</h3>
+              <p>$${p.precio.toLocaleString('es-CL')}</p>
+            </div>
+          `;
+          card.onclick = () => {
+            window.location.href = `detalle-producto.html?id=${p.id}`;
+          };
+          destacadosGrid.appendChild(card);
+        });
+      });
+
+    // ===== CARGAR EVENTOS DESDE JSON =====
+    function cargarEventosIndex() {
+      fetch('data/eventos.json')
+        .then(response => {
+          if (!response.ok) throw new Error('Error al cargar eventos');
+          return response.json();
+        })
+        .then(eventos => {
+          // Ordenar por fecha (más recientes primero)
+          eventos.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+          
+          // Mostrar solo los primeros 3
+          const eventosPreview = eventos.slice(0, 3);
+          renderizarEventosPreview(eventosPreview);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          document.getElementById('eventos-preview-grid').innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+              <p style="color: var(--gray);">No se pudieron cargar los eventos</p>
+            </div>
+          `;
+        });
+    }
+
+    // ===== RENDERIZAR EVENTOS PREVIEW =====
+    function renderizarEventosPreview(eventos) {
+      const grid = document.getElementById('eventos-preview-grid');
+      
+      if (!grid) return;
+      
+      grid.innerHTML = '';
+      
+      eventos.forEach(evento => {
+        const tipoNombres = {
+          cumpleanos: 'Cumpleaños',
+          corporativo: 'Corporativo',
+          festival: 'Festival',
+          familiar: 'Familiar'
+        };
+        
+        const tipoIconos = {
+          cumpleanos: '🎂',
+          corporativo: '🏢',
+          festival: '🎪',
+          familiar: '👨‍👩‍👧‍👦'
+        };
+        
+        const tipoColores = {
+          cumpleanos: '37, 99, 235',
+          corporativo: '249, 115, 22',
+          festival: '16, 185, 129',
+          familiar: '245, 158, 11'
+        };
+        
+        const eventoCard = document.createElement('div');
+        eventoCard.className = 'evento-card';
+        eventoCard.style.cssText = `
+          background: white;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+          transition: all 0.3s ease;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        `;
+        
+        eventoCard.innerHTML = `
+          <div class="evento-imagen-container" style="position: relative; height: 250px; overflow: hidden; background: linear-gradient(135deg, #f0f9ff, #e0f2fe);">
+            ${evento.imagenes && evento.imagenes[0] ? 
+              `<img src="assents/imagenes/${evento.imagenes[0]}" alt="${evento.nombre}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">` : 
+              `<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgb(${tipoColores[evento.tipo]}), #7c3aed); color: white; font-size: 5rem;">
+                ${tipoIconos[evento.tipo] || '🎉'}
+              </div>`
+            }
+            <div style="position: absolute; top: 15px; right: 15px; background: rgba(${tipoColores[evento.tipo]}, 0.95); color: white; padding: 8px 16px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+              ${tipoIconos[evento.tipo] || ''} ${tipoNombres[evento.tipo] || evento.tipo}
+            </div>
+          </div>
+          <div class="evento-info" style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+            <h3 class="evento-titulo" style="color: #1e293b; font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">${evento.nombre}</h3>
+            <div class="evento-detalles" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; flex-grow: 1;">
+              <div class="evento-detalle" style="display: flex; align-items: center; gap: 8px; color: #64748b; font-size: 0.95rem;">
+                <span>📍</span>
+                <span>${evento.ubicacion}</span>
+              </div>
+              <div class="evento-detalle" style="display: flex; align-items: center; gap: 8px; color: #64748b; font-size: 0.95rem;">
+                <span>📅</span>
+                <span>${formatearFecha(evento.fecha)}</span>
+              </div>
+            </div>
+            <p class="evento-descripcion" style="color: #475569; line-height: 1.7; font-size: 0.95rem; margin-bottom: 16px;">
+              ${evento.descripcion.substring(0, 100)}...
+            </p>
+            <div class="evento-footer" style="display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 2px solid #f1f5f9;">
+              <a href="eventos.html" class="evento-ver-mas" style="color: #2563eb; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 6px; transition: color 0.3s ease;">
+                <span>✨</span> Ver Más
+              </a>
+            </div>
+          </div>
+        `;
+        
+        eventoCard.addEventListener('mouseenter', () => {
+          eventoCard.style.transform = 'translateY(-10px)';
+          eventoCard.style.boxShadow = '0 20px 50px rgba(0,0,0,0.15)';
+          const img = eventoCard.querySelector('img');
+          if (img) img.style.transform = 'scale(1.1)';
+        });
+        
+        eventoCard.addEventListener('mouseleave', () => {
+          eventoCard.style.transform = 'translateY(0)';
+          eventoCard.style.boxShadow = '0 10px 30px rgba(0,0,0,0.08)';
+          const img = eventoCard.querySelector('img');
+          if (img) img.style.transform = 'scale(1)';
+        });
+        
+        eventoCard.addEventListener('click', () => {
+          window.location.href = 'eventos.html';
+        });
+        
+        grid.appendChild(eventoCard);
+      });
+    }
+
+    // ===== FORMATEAR FECHA =====
+    function formatearFecha(fechaStr) {
+      const fecha = new Date(fechaStr);
+      const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+      return fecha.toLocaleDateString('es-CL', opciones);
+    }
+
+    // ===== CARGAR AL INICIAR =====
+    document.addEventListener('DOMContentLoaded', () => {
+      cargarEventosIndex();
+    });
+  </script>
 </body>
 </html>
