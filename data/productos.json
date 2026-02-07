@@ -15,7 +15,7 @@
     "precio": 100000,
     "descripcion": "Divertido tobogán acuático con diseño de sol sonriente. Perfecto para fiestas infantiles y eventos familiares durante el verano. Duración de 5 horas.",
     "medidas": "5m Ancho x 5m Largo x 3m Alto",
-    "imagenes": ["acuatico-sol1.jpg", "acuatico-sol2.jpg", "acuatico-sol3.jpg"]
+    "imagenes": ["acuatico-sol1.jpg", "acuatico-sol2.jpeg", "acuatico-sol3.jpeg"]
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "precio": 70000,
     "descripcion": "Clásico tobogán con arco de colores vibrantes. Seguro y resistente para horas de diversión garantizada. Duración de 5 horas.",
     "medidas": "5m Ancho x 7m Largo x 5m Alto",
-    "imagenes": ["arco1.jpg", "arco2.jpg", "arco3.jpg"]
+    "imagenes": ["arco1.jpg", "arco2.jpg", "arco3.jpeg"]
   },
   {
     "id": 4,
@@ -42,7 +42,7 @@
     "precio": 70000,
     "descripcion": "Castillo inflable con tobogán integrado. Diseño que transporta a los niños a un mundo de fantasía y aventura. Duración de 5 horas.",
     "medidas": "5m Ancho x 7m Largo x 6m Alto",
-    "imagenes": ["castillo1.jpg", "castillo2.jpg", "castillo3.jpg"]
+    "imagenes": ["castillo1.jpg", "castillo2.jpeg", "castillo3.jpeg"]
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "precio": 80000,
     "descripcion": "Tobogán acuático de estilo extremo con rampas y curvas emocionantes. Para los más aventureros. Duración de 5 horas.",
     "medidas": "3m Ancho x 8m Largo x 4,5m Alto",
-    "imagenes": ["danger1.jpg", "danger2.jpg", "danger3.jpg"]
+    "imagenes": ["danger1.jpg", "danger2.jpeg", "danger3.jpeg"]
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "precio": 70000,
     "descripcion": "Encantador tobogán temático de Los Pitufos. Diseño colorido y seguro para los más pequeños. Duración de 5 horas.",
     "medidas": "4m Ancho x 7m Largo x 7m Alto",
-    "imagenes": ["pitufo1.jpg", "pitufo2.jpg", "pitufo3.jpg"]
+    "imagenes": ["pitufo1.jpg", "pitufo2.jpeg", "pitufo3.jpeg"]
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "precio": 70000,
     "descripcion": "Alegre tobogán con diseño de payaso sonriente. Siempre un éxito en cumpleaños infantiles. Duración de 5 horas.",
     "medidas": "5m Ancho x 5m Largo x 6m Alto",
-    "imagenes": ["payaso1.jpg", "payaso2.jpg", "payaso3.jpg"]
+    "imagenes": ["payaso1.jpg", "payaso2.jpeg", "payaso3.jpeg"]
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "precio": 70000,
     "descripcion": "Castillo inflable con temática de piratas. Incluye tobogán, obstáculos y zona de salto. ¡Una aventura épica para los niños!. Duración de 5 horas.",
     "medidas": "7m Ancho x 5m Largo x 4m Alto",
-    "imagenes": ["pirata1.jpg", "pirata2.jpg", "pirata3.jpg"]
+    "imagenes": ["pirata1.jpg", "pirata2.jpeg", "pirata3.jpeg"]
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "precio": 90000,
     "descripcion": "Impresionante robot inflable de 6 metros de altura. Diseño futurista que cautiva a niños y adultos por igual. Duración de 5 horas.",
     "medidas": "6m Ancho x 8m Largo x 6m Alto",
-    "imagenes": ["robot1.jpg", "robot2.jpg", "robot3.jpg"]
+    "imagenes": ["robot1.jpg", "robot2.jpeg", "robot3.jpeg"]
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "precio": 60000,
     "descripcion": "Tobogán seco con diseño tropical de palmera. Perfecto para eventos en espacios cerrados o días sin agua. Duración de 5 horas.",
     "medidas": "4,5m Ancho x 5m Largo x 5m Alto",
-    "imagenes": ["palmera1.jpg", "palmera2.jpg", "palmera3.jpg"]
+    "imagenes": ["palmera1.jpg", "palmera2.jpeg", "palmera3.jpeg"]
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "precio": 60000,
     "descripcion": "Tobogán clásico con diseño de sol radiante. Simple, seguro y siempre divertido. Duración de 5 horas.",
     "medidas": "4,5m Ancho x 5m Largo x 6m Alto",
-    "imagenes": ["sol1.jpg", "sol2.jpg", "sol3.jpg"]
+    "imagenes": ["sol1.jpg", "sol2.jpeg", "sol3.jpeg"]
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "precio": 150000,
     "descripcion": "¡El rey de los juegos mecánicos! Toro mecánico profesional con control de velocidad y seguridad certificada. Incluye operador capacitado. Duración de 5 horas.",
     "medidas": "5m Diámetro (área de seguridad)",
-    "imagenes": ["toro1.jpg", "toro2.jpg", "toro3.jpg"]
+    "imagenes": ["toro1.jpeg", "toro2.jpg", "toro3.jpg"]
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "precio": 140000,
     "descripcion": "Clásico juego de habilidad donde los niños intentan no caer por las agujas del reloj. ¡Muy competitivo y entretenido!. Duración de 3 horas.",
     "medidas": "2m Ancho x 1m Profundo x 2,5m Alto",
-    "imagenes": ["reloj1.jpg", "reloj2.jpg", "reloj3.jpg"]
+    "imagenes": ["reloj1.jpg", "reloj2.jpg", "reloj3.jpeg"]
   },
   {
     "id": 15,
@@ -169,5 +169,14 @@
     "descripcion": "Mesa de aire hockey con diseño profesional. Dos jugadores compiten por anotar goles en esta emocionante mesa de juego. Duración de 5 horas.",
     "medidas": "1,4m Largo x 0,75m Ancho x 0,85m Alto",
     "imagenes": ["hockey1.jpg", "hockey2.jpg", "hockey3.jpg"]
+  },
+  {
+    "id": 20,
+    "nombre": "Tobogán doble Disney",
+    "categoria": "inflables",
+    "precio": 10,
+    "descripcion": "daskdnakjdnaodnaodnaoidnaodnaodaoin. Duración de 5 horas.",
+    "medidas": "1,4m Largo x 0,75m Ancho x 0,85m Alto",
+    "imagenes": ["disney1.jpeg", "disney2.jpeg", "disney3.jpeg"]
   }
 ]

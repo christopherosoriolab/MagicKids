@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "nombre": "Cumpleaños Lucas - Tobogán Palmera",
-    "tipo": "cumpleanos",
+    "nombre": "18 de septiembre - Munisipalidad de Pedro Aguirre Cerda",
+    "tipo": "festival",
     "descripcion": "Increíble fiesta infantil con tobogán acuático Palmera. Los niños lo pasaron genial durante toda la tarde con juegos y actividades.",
-    "fecha": "2026-01-15",
-    "imagenes": ["evento1.jpg"],
-    "ubicacion": "Parque Forestal, Santiago"
+    "fecha": "2025-09-17",
+    "imagenes": ["eventopac.jpeg"],
+    "ubicacion": "Pedro Aguirre Cerda, Santiago"
   },
   {
     "id": 2,
