@@ -1,7 +1,7 @@
 // ======================
 // CONFIGURACIÓN INICIAL
 // ======================
-const WHATSAPP = "56912345678";
+const WHATSAPP = "56963160639";
 const URL_PARAMS = new URLSearchParams(window.location.search);
 const PRODUCTO_ID = parseInt(URL_PARAMS.get("id"));
 

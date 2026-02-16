@@ -17,7 +17,7 @@
   </div>
 
   <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/56912345678" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/56963160639" class="whatsapp-float" target="_blank">
     <i>💬</i>
   </a>
 
@@ -51,7 +51,7 @@
     </nav>
 
     <div class="nav-right">
-      <a href="https://wa.me/56912345678" class="btn-whatsapp" target="_blank">
+      <a href="https://wa.me/56963160639" class="btn-whatsapp" target="_blank">
         <span>WhatsApp</span>
       </a>
     </div>
@@ -259,7 +259,20 @@
       .then(res => res.json())
       .then(productos => {
         const destacadosGrid = document.getElementById('destacados-grid');
-        const destacados = productos.slice(0, 4);
+  
+      
+      // ===== MÉTODO 1: SELECCIONAR POR IDs ESPECÍFICOS (RECOMENDADO) =====
+      // Cambia estos IDs por los de los productos que quieras mostrar
+      const idsDestacados = [1, 4, 9, 13]; // IDs de los productos que quieres mostrar
+    
+      // Filtrar productos manteniendo el orden de los IDs
+      const destacados = idsDestacados
+        .map(id => productos.find(p => p.id === id))
+        .filter(p => p) // Elimina productos no encontrados
+        .slice(0, 4); // Asegura máximo 3 productos
+
+
+
         
         destacados.forEach(p => {
           const badgeClass = {

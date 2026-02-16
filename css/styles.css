@@ -5,6 +5,7 @@
 
 
 
+
 /* ===== HERO SECTION (FIX CENTRADO) ===== */
 .hero {
   height: calc(100vh - 80px);
@@ -635,6 +636,20 @@ img {
   margin-top: 2rem;
 }
 
+
+
+
+
+.badge-inflables { background: var(--primary); }
+.badge-mecanicos { background: var(--secondary); }
+.badge-interior { background: var(--success); }
+.badge-carros { background: var(--warning); color: var(--dark); }
+
+
+
+
+/* ===== AJUSTE DEFINITIVO TARJETAS DE PRODUCTO - IMAGEN SIN BORDES BLANCOS ===== */
+/* Tarjeta completa */
 .producto {
   background: white;
   border-radius: var(--radius-md);
@@ -642,133 +657,81 @@ img {
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
 }
 
-.producto:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
+/* CONTENEDOR DE IMAGEN: CUADRADO PERFECTO EN TODAS LAS PANTALLAS */
+.img-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* ¡SOLUCIÓN MODERNA Y LIMPIA! */
+  background: transparent;
+  margin: 0;
+  overflow: hidden;
 }
 
+/* IMAGEN: OCUPA TODO EL CUADRADO SIN ESPACIOS BLANCOS */
+.img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre TODO sin deformar */
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.producto:hover .img-box img {
+  transform: scale(1.08);
+}
+
+/* BADGE SOBRE LA IMAGEN */
 .producto-badge {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-full);
+  z-index: 10;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
   font-weight: 600;
-  font-size: 0.85rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  backdrop-filter: blur(2px);
   color: white;
 }
 
-.badge-inflables { background: var(--primary); }
-.badge-mecanicos { background: var(--secondary); }
-.badge-interior { background: var(--success); }
-.badge-carros { background: var(--warning); color: var(--dark); }
-
-.img-box {
-  position: relative;
-  height: 220px;
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.img-box img {
-  max-height: 90%;
-  max-width: 90%;
-  object-fit: contain;
-  transition: var(--transition);
-}
-
-/* ===== AJUSTE DEFINITIVO TARJETAS DE PRODUCTO - IMAGEN SIN BORDES BLANCOS ===== */
-/* Tarjeta completa */
-.producto {
-  background: white !important;
-  border-radius: var(--radius-md) !important;
-  overflow: hidden !important; /* IMPORTANTE: recorta la imagen al borde */
-  box-shadow: var(--shadow-sm) !important;
-  transition: var(--transition) !important;
-  cursor: pointer !important;
-  display: flex !important;
-  flex-direction: column !important;
-  height: auto !important; /* Altura automática */
-}
-
-/* CONTENEDOR DE IMAGEN: OCUPA TODO EL ANCHO Y ES CUADRADO */
-.img-box {
-  position: relative !important;
-  width: 100% !important;
-  padding-top: 100% !important; /* Hace que sea CUADRADO (1:1) */
-  background: transparent !important; /* Sin fondo */
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important; /* Recorta cualquier desbordamiento */
-  padding-top: 100%; /* Crea un cuadrado perfecto */
-  position: relative;
-}
-
-/* IMAGEN: OCUPA TODO EL CUADRADO SIN BORDES BLANCOS */
-.img-box img {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important; /* CUBRE TODO EL CUADRADO (sin bordes blancos) */
-  object-position: center !important; /* Centra la imagen */
-  display: block !important;
-  transition: transform 0.4s ease !important;
-  border-radius: 0 !important; /* Sin bordes redondeados en la imagen */
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Efecto hover: zoom suave */
-.producto:hover .img-box img {
-  transform: scale(1.08) !important;
-}
-
-/* BADGE: flotando sobre la imagen */
-.producto-badge {
-  position: absolute !important;
-  top: 1rem !important;
-  right: 1rem !important;
-  z-index: 10 !important;
-  padding: 0.5rem 1.2rem !important;
-  border-radius: 20px !important;
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
-  backdrop-filter: blur(2px) !important;
-}
-
-/* INFORMACIÓN DEL PRODUCTO: debajo de la imagen */
+/* INFORMACIÓN DEBAJO DE LA IMAGEN */
 .producto-info {
-  padding: 1.5rem !important; /* Espacio interior */
-  text-align: center !important; /* Texto centrado */
-  flex-grow: 1 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 0.75rem !important;
+  padding: 1.5rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 /* Título del producto */
 .producto-info h3 {
-  font-size: 1.25rem !important;
-  margin: 0 !important;
-  color: var(--dark) !important;
-  font-weight: 700 !important;
-  line-height: 1.3 !important;
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--dark);
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-/* Precio */
 .producto-info p {
-  color: var(--primary) !important;
-  font-weight: 700 !important;
-  font-size: 1.5rem !important;
-  margin: 0 !important;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1190,78 +1153,79 @@ img {
   background: var(--primary-dark);
 }
 
-.mapa-container {
-  margin-top: 4rem;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  height: 400px;
-  background: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.5rem;
-}
+
 
 /* ===== DETALLE PRODUCTO ===== */
-.detalle-hero {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232563eb"/><circle cx="50" cy="50" r="30" fill="rgba(255,255,255,0.1)"/></svg>');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 4rem 0;
-}
+
 
 .detalle-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  gap: 2rem;
+  margin-top: 0,5rem;
 }
 
 .galeria-producto {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  width: 100%;
 }
 
 .imagen-principal-container {
   background: white;
   border-radius: var(--radius-md);
-  padding: 1rem;
+  padding: 0; /* ELIMINA EL ESPACIO BLANCO */
   box-shadow: var(--shadow-sm);
+  overflow: hidden; /* Recorta cualquier desbordamiento */
 }
 
 .imagen-principal-container img {
   width: 100%;
-  height: 400px;
-  object-fit: contain;
-  background: var(--light);
-  padding: 2rem;
+  height: auto; /* Mantiene proporción natural */
+  display: block;
+  object-fit: contain; /* Muestra imagen completa sin recortar */
+  padding: 0;
+  margin: 0;
+  background: var(--light); /* Fondo sutil si la imagen no llena todo */
 }
 
 .miniaturas {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
+  display: flex !important;
+  gap: 0.75rem !important;
+  overflow-x: auto !important;
+  padding: 0.75rem 0 !important;
+  margin-top: 1rem !important;
+  width: 100% !important;
+  -ms-overflow-style: none !important; /* Oculta scrollbar en IE/Edge */
+  scrollbar-width: none !important; /* Oculta scrollbar en Firefox */
+  background: transparent !important;
+}
+
+/* Oculta scrollbar en Chrome/Safari */
+.miniaturas::-webkit-scrollbar {
+  display: none !important;
 }
 
 .miniaturas img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  border: 3px solid transparent;
-  transition: var(--transition);
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: cover !important; /* Imagen completa sin espacios */
+  border-radius: var(--radius-sm) !important;
+  cursor: pointer !important;
+  border: 3px solid transparent !important;
+  transition: all 0.3s ease !important;
+  flex-shrink: 0 !important; /* Evita que se encojan */
+  background: var(--light) !important; /* Fondo si la imagen no carga */
+  display: block !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
 }
+
 
 .miniaturas img:hover,
 .miniaturas img.active {
-  border-color: var(--primary);
-  transform: scale(1.1);
+  border-color: var(--primary) !important;
+  transform: scale(1.08) !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
 }
 
 .info-producto {
@@ -1535,6 +1499,44 @@ img {
   to { transform: rotate(360deg); }
 }
 
+
+/* ===== RESPONSIVE - SIN CAMBIOS EN .img-box ===== */
+@media (max-width: 768px) {
+  .producto-info {
+    padding: 1.25rem;
+  }
+  
+  .producto-info h3 {
+    font-size: 1.15rem;
+  }
+  
+  .producto-info p {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .producto-info {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .producto-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .producto-info p {
+    font-size: 1.25rem;
+  }
+  
+  .producto-badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .mobile-menu-btn {
@@ -1605,9 +1607,27 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .imagen-principal-container img {
-    height: 300px;
-  }
+  .imagen-principal-container {
+  background: white !important;
+  border-radius: var(--radius-md) !important;
+  padding: 0 !important; /* Elimina padding que agrandaba */
+  box-shadow: var(--shadow-sm) !important;
+  overflow: hidden !important;
+  max-width: 100% !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* IMAGEN PRINCIPAL: PROPORCIONAL Y RESPONSIVE */
+.imagen-principal-container img {
+  width: 100% !important;
+  height: auto !important; /* Altura automática según proporción */
+  max-height: 500px !important; /* Límite máximo en desktop */
+  display: block !important;
+  object-fit: contain !important; /* Muestra imagen completa sin recortar */
+  background: var(--light) !important;
+  padding: 1.5rem !important; /* Espacio interior controlado */
+  margin: 0 auto !important; /* Centra la imagen */
+}
 
   .whatsapp-float {
     bottom: 1.5rem;
@@ -1781,9 +1801,7 @@ img {
     gap: 24px;
   }
   
-  .evento-imagen-container {
-    height: 200px;
-  }
+
   
   .evento-info {
     padding: 20px;

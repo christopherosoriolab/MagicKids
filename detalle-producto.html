@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* Loader mínimo para evitar bloqueos */
+    /* Loader mínimo */
     #loader {
       position: fixed;
       top: 0;
@@ -38,11 +38,9 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
-    /* Contenido inicial oculto */
     #contenido-principal { display: none; }
     #error-container { display: none; }
     
-    /* Estilos para producto no disponible */
     .detalle-no-disponible {
       background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.15));
       padding: 1.5rem;
@@ -78,13 +76,13 @@
 </head>
 <body>
 
-  <!-- LOADER MÍNIMO (se oculta a los 400ms SIEMPRE) -->
+  <!-- LOADER -->
   <div id="loader">
     <div class="loader-spinner"></div>
   </div>
 
   <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/56912345678" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/56963160639" class="whatsapp-float" target="_blank">
     <i>💬</i>
   </a>
 
@@ -113,21 +111,13 @@
       <a href="contacto.html" class="nav-link">Contacto</a>
     </nav>
     <div class="nav-right">
-      <a href="https://wa.me/56912345678" class="btn-whatsapp" target="_blank">WhatsApp</a>
+      <a href="https://wa.me/56963160639" class="btn-whatsapp" target="_blank">WhatsApp</a>
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL (oculto inicialmente) -->
+  <!-- CONTENIDO PRINCIPAL (SIN HERO SECTION) -->
   <div id="contenido-principal">
-    <section class="detalle-hero">
-      <div class="container">
-        <div style="text-align: center;">
-          <h1 style="color: white;" id="nombre-hero">Producto</h1>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="section" style="padding-top: 2rem;"> <!-- Reducido padding superior -->
       <div class="container">
         <div class="detalle-container">
           <div class="galeria-producto">
@@ -169,7 +159,6 @@
                 <span class="requisito-icono">✓</span>
                 <span class="requisito-texto">Superficie plana y segura</span>
               </div>
-              
             </div>
           </div>
         </div>
@@ -184,12 +173,7 @@
         <div style="font-size: 4rem; color: #ef4444; margin-bottom: 1.5rem;">⚠️</div>
         <h2 style="color: #1e293b; margin-bottom: 1rem;">Producto no encontrado</h2>
         <p style="color: #64748b; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-          No pudimos cargar la información del producto. Esto puede deberse a:
-          <ul style="text-align: left; margin: 1.5rem auto; max-width: 500px; color: #64748b;">
-            <li>❌ ID de producto incorrecto en la URL</li>
-            <li>❌ Archivo de datos no encontrado</li>
-            <li>❌ Problema de conexión</li>
-          </ul>
+          No pudimos cargar la información del producto.
         </p>
         <a href="catalogo.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
           Volver al Catálogo
@@ -226,40 +210,30 @@
             <p>📍 Santiago, Chile</p>
           </div>
         </div>
-        
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 MagicKids Producciones.</p>
-        <a href="https://wa.me/56937073605"> <p > BY CHRISTOPHER IGNACIO OSORIO</p></a>
+        <a href="https://wa.me/56937073605"><p>BY CHRISTOPHER IGNACIO OSORIO</p></a>
       </div>
     </div>
   </footer>
 
   <script>
-    // ==============================
-    // VARIABLES GLOBALES
-    // ==============================
-    const WHATSAPP = "56912345678";
+    const WHATSAPP = "56963160639";
     const URL_PARAMS = new URLSearchParams(window.location.search);
     const PRODUCTO_ID = parseInt(URL_PARAMS.get("id"));
 
-    // ==============================
-    // CARGAR PRODUCTO AL INICIAR
-    // ==============================
     document.addEventListener('DOMContentLoaded', () => {
-      // Ocultar loader después de 300ms
       setTimeout(() => {
         const loader = document.getElementById('loader');
         if (loader) loader.classList.add('hidden');
       }, 300);
 
-      // Validar ID
       if (!PRODUCTO_ID || isNaN(PRODUCTO_ID)) {
         mostrarError('ID de producto inválido');
         return;
       }
 
-      // Cargar producto
       fetch('data/productos.json')
         .then(response => {
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -267,12 +241,10 @@
         })
         .then(productos => {
           const producto = productos.find(p => p.id === PRODUCTO_ID);
-          
           if (!producto) {
             mostrarError('Producto no encontrado');
             return;
           }
-          
           cargarProducto(producto);
         })
         .catch(error => {
@@ -280,27 +252,19 @@
           mostrarError('Error al cargar el producto');
         });
 
-      // Configurar navbar
       configurarNavbar();
     });
 
-    // ==============================
-    // CARGAR PRODUCTO
-    // ==============================
     function cargarProducto(producto) {
-      // Verificar disponibilidad (por defecto true si no existe)
       const disponible = producto.disponible !== false && producto.disponible !== undefined ? producto.disponible : true;
-
-      // Actualizar título de la página
-      document.title = `${producto.nombre} | MagicKids`;
+      document.title = `${producto.nombre} | MagicKids`; // Solo título en pestaña
       
-      // Actualizar contenido
-      document.getElementById('nombre-hero').textContent = producto.nombre;
+      // REMOVIDO: document.getElementById('nombre-hero').textContent = producto.nombre;
+      
       document.getElementById('nombre').textContent = producto.nombre;
       document.getElementById('precio').textContent = `$${producto.precio.toLocaleString('es-CL')}`;
       document.getElementById('descripcion').textContent = producto.descripcion || 'Descripción no disponible.';
       
-      // Categoría con iconos
       const categorias = {
         'inflables': '🎈 Juego Inflable',
         'mecanicos': '🎢 Juego Mecánico',
@@ -309,7 +273,6 @@
       };
       document.getElementById('categoria-texto').textContent = categorias[producto.categoria] || producto.categoria;
       
-      // Medidas (ocultar para carros)
       const medidasContainer = document.getElementById('medidas-container');
       if (producto.categoria === 'carros' || !producto.medidas) {
         if (medidasContainer) medidasContainer.style.display = 'none';
@@ -317,7 +280,6 @@
         document.getElementById('medidas').textContent = producto.medidas;
       }
       
-      // Mostrar mensaje de no disponibilidad si aplica
       const infoProducto = document.querySelector('.info-producto');
       if (!disponible && infoProducto) {
         const mensajeNoDisponible = document.createElement('div');
@@ -329,18 +291,16 @@
         infoProducto.insertBefore(mensajeNoDisponible, infoProducto.firstChild);
       }
       
-      // Imágenes
       const imgPrincipal = document.getElementById('imagen-principal');
       if (imgPrincipal && producto.imagenes && producto.imagenes[0]) {
         imgPrincipal.src = `assents/imagenes/${producto.imagenes[0]}`;
         imgPrincipal.alt = producto.nombre;
       }
       
-      // Miniaturas
       const miniaturas = document.getElementById('miniaturas');
       if (miniaturas && producto.imagenes) {
         miniaturas.innerHTML = '';
-        producto.imagenes.slice(0, 4).forEach((img, index) => {
+        producto.imagenes.slice(0, 3).forEach((img, index) => {
           const imgEl = document.createElement('img');
           imgEl.src = `assents/imagenes/${img}`;
           imgEl.alt = `Imagen ${index + 1}`;
@@ -351,28 +311,29 @@
                 imgPrincipal.src = imgEl.src;
                 imgPrincipal.alt = `${producto.nombre} - Imagen ${index + 1}`;
               }
+              document.querySelectorAll('.miniaturas img').forEach(i => i.classList.remove('active'));
+              imgEl.classList.add('active');
             };
           }
           
+          if (index === 0) imgEl.classList.add('active');
           miniaturas.appendChild(imgEl);
         });
       }
       
-      // Botón WhatsApp - diferente si no está disponible
       const btnCotizar = document.getElementById('btn-cotizar');
       if (btnCotizar) {
         if (disponible) {
           const mensaje = `Hola! Quiero cotizar el siguiente producto:\n\n` +
                           `🎮 Producto: ${producto.nombre}\n` +
                           `💰 Precio: $${producto.precio.toLocaleString('es-CL')}\n` +
-                          `🏷️ Categoría: ${categorias[producto.categoria] || producto.categoria}\n\n` +
-                          `¿Tienen disponibilidad para mi evento?`;
+                          `🏷️ Categoría: ${categorias[producto.categoria] || producto.categoria}`;
           
           btnCotizar.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
           btnCotizar.textContent = '💬 Cotizar Ahora';
           btnCotizar.className = 'btn-cotizar';
         } else {
-          const mensaje = `Hola! Vi que el producto "${producto.nombre}" no está disponible. ¿Tienen alternativas similares o cuándo estará disponible nuevamente?`;
+          const mensaje = `Hola! Vi que el producto "${producto.nombre}" no está disponible. ¿Tienen alternativas similares?`;
           
           btnCotizar.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
           btnCotizar.textContent = '💬 Consultar Alternativas';
@@ -380,17 +341,11 @@
         }
       }
       
-      // Mostrar contenido
       document.getElementById('contenido-principal').style.display = 'block';
-      
-      // Ocultar loader
       const loader = document.getElementById('loader');
       if (loader) loader.classList.add('hidden');
     }
 
-    // ==============================
-    // MOSTRAR ERROR
-    // ==============================
     function mostrarError(mensaje) {
       document.getElementById('error-container').style.display = 'block';
       document.getElementById('loader').classList.add('hidden');
@@ -398,11 +353,7 @@
       document.title = 'Producto no encontrado | MagicKids';
     }
 
-    // ==============================
-    // CONFIGURAR NAVBAR
-    // ==============================
     function configurarNavbar() {
-      // Efecto scroll navbar
       window.addEventListener('scroll', () => {
         const navbar = document.getElementById('navbar');
         if (navbar) {
@@ -410,7 +361,6 @@
         }
       });
 
-      // Menú móvil
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const navCenter = document.getElementById('nav-center');
 

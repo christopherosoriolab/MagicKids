@@ -6,7 +6,7 @@
     "precio": 100000,
     "descripcion": "Tobogán acuático temático con diseño de palmera. Ideal para días calurosos y eventos al aire libre. Duración de 5 horas.",
     "medidas": "4,5m Ancho x 5m Largo x 5m Alto",
-    "imagenes": ["acuatico-palmera1.jpg", "acuatico-palmera2.jpg", "acuatico-palmera3.jpg"]
+    "imagenes": ["acuatico-palmera1.jpg", "acuatico-palmera2.jpg", "acuatico-palmera3.jpeg"]
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "precio": 100000,
     "descripcion": "Divertido tobogán acuático con diseño de sol sonriente. Perfecto para fiestas infantiles y eventos familiares durante el verano. Duración de 5 horas.",
     "medidas": "5m Ancho x 5m Largo x 3m Alto",
-    "imagenes": ["acuatico-sol1.jpg", "acuatico-sol2.jpeg", "acuatico-sol3.jpeg"]
+    "imagenes": ["acuatico-sol1.jpeg", "acuatico-sol2.jpeg", "acuatico-sol3.jpg"]
   },
   {
     "id": 3,
@@ -96,7 +96,7 @@
     "precio": 60000,
     "descripcion": "Tobogán seco con diseño tropical de palmera. Perfecto para eventos en espacios cerrados o días sin agua. Duración de 5 horas.",
     "medidas": "4,5m Ancho x 5m Largo x 5m Alto",
-    "imagenes": ["palmera1.jpg", "palmera2.jpeg", "palmera3.jpeg"]
+    "imagenes": ["palmera1.jpeg", "palmera2.jpeg", "palmera3.jpeg"]
   },
   {
     "id": 12,
@@ -130,8 +130,8 @@
     "nombre": "Carro Algodón de Azúcar y Palomitas",
     "categoria": "carros",
     "precio": 95000,
-    "descripcion": "Carro gastronómico completo para preparar algodón de azúcar y palomitas frescas. Incluye operador y materiales por 4 horas.",
-    "medidas": "1,5m x 1m x 1,8m",
+    "descripcion": "Carro gastronómico completo para preparar algodón de azúcar y palomitas frescas. Incluye operador y materiales por 3 horas.",
+    "medidas": "1,5m Ancho x 1m Largo x 1,8m Alto",
     "imagenes": ["carro-algodon-cabritas1.jpg", "carro-algodon-cabritas2.jpg", "carro-algodon-cabritas3.jpg"]
   },
   {
@@ -139,44 +139,28 @@
     "nombre": "Carro Gastronómico",
     "categoria": "carros",
     "precio": 120000,
-    "descripcion": "Carro gourmet versátil para servir; HotDogs, Completos, Hamburguesas y mas. Estructura elegante con toldo y mostrador de servicio. Duración de 4 horas.",
-    "medidas": "2m x 1,2m x 2m",
+    "descripcion": "Carro gourmet versátil para servir; HotDogs, Completos, Hamburguesas y mas. Estructura elegante con toldo y mostrador de servicio. Duración de 3 horas.",
+    "medidas": "2m Ancho x 1,2m Largo x 2m Alto",
     "imagenes": ["carro-gastronomico1.jpg", "carro-gastronomico2.jpg", "carro-gastronomico3.jpg"]
   },
+
   {
     "id": 17,
-    "nombre": "Máquina Arcade Clásica",
-    "categoria": "interior",
-    "precio": 80000,
-    "descripcion": "Arcade retro con mas de 1.000 juegos clásicos incluidos (Pac-Man, Donkey Kong, Street Fighter y más). Ideal para eventos indoor. Duración de 5 horas.",
-    "medidas": "0,8m Ancho x 0,7m Profundo x 1,8m Alto",
-    "imagenes": ["arcade1.jpg", "arcade2.jpg", "arcade3.jpg"]
-  },
-  {
-    "id": 18,
-    "nombre": "Mesa Taca-Taca Profesional",
-    "categoria": "interior",
-    "precio": 75000,
-    "descripcion": "Mesa de fútbol de salón profesional con diseño moderno y jugadores suaves. Para partidos emocionantes en cualquier evento. Duración de 5 horas.",
-    "medidas": "1,5m Largo x 0,8m Ancho x 0,9m Alto",
-    "imagenes": ["tacataca1.jpg", "tacataca2.jpg", "tacataca3.jpg"]
-  },
-  {
-    "id": 19,
-    "nombre": "Mesa de Hockey de Salón",
-    "categoria": "interior",
-    "precio": 70000,
-    "descripcion": "Mesa de aire hockey con diseño profesional. Dos jugadores compiten por anotar goles en esta emocionante mesa de juego. Duración de 5 horas.",
-    "medidas": "1,4m Largo x 0,75m Ancho x 0,85m Alto",
-    "imagenes": ["hockey1.jpg", "hockey2.jpg", "hockey3.jpg"]
-  },
-  {
-    "id": 20,
     "nombre": "Tobogán doble Disney",
     "categoria": "inflables",
-    "precio": 10,
-    "descripcion": "daskdnakjdnaodnaodnaoidnaodnaodaoin. Duración de 5 horas.",
-    "medidas": "1,4m Largo x 0,75m Ancho x 0,85m Alto",
+    "precio": 80000,
+    "descripcion": "Tobogán doble de estilo Disney con rampas y diseños emocionantes. Para los más aventureros. Duración de 5 horas.",
+    "medidas": "9m Largo x 4m Ancho x 8m Alto",
     "imagenes": ["disney1.jpeg", "disney2.jpeg", "disney3.jpeg"]
+  },
+
+  {
+    "id": 18,
+    "nombre": "Pack interior 1",
+    "categoria": "interior",
+    "precio": 80000,
+    "descripcion": "3 juegos de interior para tu evento; Arcade, Taca-Taca y Hockey . Duración de 5 horas.",
+    "medidas": "",
+    "imagenes": [ "arcade1.jpeg", "hockey2.jpeg", "tacataca1.jpeg"]
   }
 ]
