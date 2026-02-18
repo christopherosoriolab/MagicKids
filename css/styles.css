@@ -2031,4 +2031,114 @@ img {
 
 
 
+
+
+
+}/* ===== FIX IMAGEN DETALLE PRODUCTO - SIN BORDE BLANCO EN MÓVIL ===== */
+/* Eliminar padding innecesario en móvil */
+@media (max-width: 768px) {
+  .imagen-principal-container {
+    padding: 0 !important; /* Sin padding en el contenedor */
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .imagen-principal-container img {
+    padding: 0 !important; /* ¡ELIMINAR ESTE PADDING ES CLAVE! */
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    background: transparent !important; /* Sin fondo que genere "borde" */
+    border-radius: 0 !important; /* Sin bordes redondeados que generen espacio */
+  }
+  
+  /* Miniaturas: sin padding/margin extra */
+  .miniaturas {
+    padding: 0.75rem 0 !important;
+    gap: 0.6rem !important;
+    display: flex;
+  justify-content: center;   /* 🔥 centra horizontal */
+  align-items: center;
+    
+  }
+  
+  .miniaturas img {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 75px !important;
+    height: 75px !important;
+    border: 2px solid transparent !important;
+  }
+}
+
+/* ===== FIX ADICIONAL: CONTENEDOR SIN ESPACIOS ===== */
+.imagen-principal-container {
+  padding: 0 !important; /* Eliminar padding global */
+  margin: 0 !important;
+  background: transparent !important; /* Sin fondo blanco en el contenedor */
+  border-radius: 0 !important; /* Sin bordes que generen espacio */
+}
+
+.imagen-principal-container img {
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important; /* Eliminar espacio inferior del inline-block */
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border-radius: 0 !important
+}
+
+
+/* ===== MEJORAS PARA ESPECIFICACIONES ===== */
+.especificaciones {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--light);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--light);
+}
+
+.especificacion {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--gray);
+  font-size: 1.05rem;
+}
+
+.especificacion:last-child {
+  border-bottom: none;
+}
+
+.especificacion-label {
+  font-weight: 600;
+  color: black;
+  flex: 0 0 30%; /* Fija el ancho de la etiqueta */
+}
+
+.especificacion-valor {
+
+  font-weight: 600;
+  flex: 1;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+/* ===== MEJORAS PARA MOBIL ===== */
+@media (max-width: 768px) {
+  .especificacion {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .especificacion-label {
+    flex: auto;
+  }
+  
+  .especificacion-valor {
+    padding-left: 0;
+  }
 }

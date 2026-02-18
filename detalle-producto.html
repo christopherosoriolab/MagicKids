@@ -134,16 +134,21 @@
             <div class="precio-producto" id="precio">$0</div>
             <div class="descripcion-producto" id="descripcion">Descripción del producto.</div>
 
+
+
+
             <div class="especificaciones">
-              <div class="especificacion">
-                <span class="especificacion-label">Categoría:</span>
-                <span class="especificacion-valor" id="categoria-texto">-</span>
-              </div>
-              <div class="especificacion" id="medidas-container">
-                <span class="especificacion-label">Medidas:</span>
-                <span class="especificacion-valor" id="medidas">-</span>
-              </div>
-            </div>
+  <div class="especificacion">
+    <span class="especificacion-label">Categoría: </span> <!-- ¡Espacio después de los dos puntos! -->
+    <span class="especificacion-valor" id="categoria-texto">-</span>
+  </div>
+  <div class="especificacion" id="medidas-container">
+    <span class="especificacion-label">Medidas: </span> <!-- ¡Espacio después de los dos puntos! -->
+    <span class="especificacion-valor" id="medidas">-</span>
+  </div>
+</div>
+
+
 
             <a href="#" id="btn-cotizar" class="btn-cotizar" target="_blank">
               💬 Cotizar Ahora
@@ -271,13 +276,15 @@
         'interior': '🎮 Juego de Salón',
         'carros': '🍔 Carro Gastronómico'
       };
-      document.getElementById('categoria-texto').textContent = categorias[producto.categoria] || producto.categoria;
+      // Agregar espacio después de los dos puntos
+      document.getElementById('categoria-texto').textContent = ` ${categorias[producto.categoria] || producto.categoria}`;
       
       const medidasContainer = document.getElementById('medidas-container');
       if (producto.categoria === 'carros' || !producto.medidas) {
         if (medidasContainer) medidasContainer.style.display = 'none';
       } else {
-        document.getElementById('medidas').textContent = producto.medidas;
+        // Agregar espacio después de los dos puntos
+    document.getElementById('medidas').textContent = ` ${producto.medidas}`;
       }
       
       const infoProducto = document.querySelector('.info-producto');
