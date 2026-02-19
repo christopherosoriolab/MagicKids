@@ -523,7 +523,7 @@ img {
   font-size: 2rem;
 }
 
-.categoria-card.inflables .categoria-icon { background: var(--primary); }
+.categoria-card.inflables .categoria-icon { background: rgb(206, 206, 6); }
 .categoria-card.mecanicos .categoria-icon { background: var(--secondary); }
 .categoria-card.interior .categoria-icon { background: var(--success); }
 .categoria-card.carros .categoria-icon { background: var(--warning); }
@@ -812,7 +812,7 @@ img {
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 6rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -1037,7 +1037,7 @@ img {
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 6rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -2087,26 +2087,24 @@ img {
   height: auto !important;
   object-fit: contain !important;
   background: transparent !important;
-  border-radius: 0 !important
+  border-radius: 10px !important
 }
 
 
 /* ===== MEJORAS PARA ESPECIFICACIONES ===== */
 .especificaciones {
   margin: 2rem 0;
-  padding: 1.5rem;
-  background: var(--light);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--light);
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--light);
 }
 
 .especificacion {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--gray);
-  font-size: 1.05rem;
 }
+
 
 .especificacion:last-child {
   border-bottom: none;
@@ -2114,20 +2112,42 @@ img {
 
 .especificacion-label {
   font-weight: 600;
-  color: black;
-  flex: 0 0 30%; /* Fija el ancho de la etiqueta */
+  color: var(--dark);
 }
 
 .especificacion-valor {
-
-  font-weight: 600;
-  flex: 1;
-  text-align: left;
-  padding-left: 0.5rem;
+  color: var(--gray);
+  font-weight: 500;
 }
 
 /* ===== MEJORAS PARA MOBIL ===== */
 @media (max-width: 768px) {
+  /* ===== FIX NAVBAR MOBILE LAYOUT ===== */
+.navbar {
+  position: relative;
+  justify-content: center;
+}
+
+/* Botón hamburguesa a la izquierda */
+.mobile-menu-btn {
+  display: block;
+  position: absolute;
+  left: 1.5rem;
+  font-size: 1.8rem;
+  z-index: 1001;
+}
+
+/* Centrar logo perfectamente */
+.nav-left {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Opcional: ocultar WhatsApp en móvil */
+.nav-right {
+  display: none;
+}
   .especificacion {
     flex-direction: column;
     align-items: flex-start;
@@ -2141,4 +2161,21 @@ img {
   .especificacion-valor {
     padding-left: 0;
   }
+
+  
+.miembro-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e293b, #334155);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 auto 1rem;
+  letter-spacing: 2px;
+}
+  
 }

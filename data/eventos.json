@@ -7,23 +7,6 @@
     "fecha": "2025-09-17",
     "imagenes": ["eventopac.jpeg"],
     "ubicacion": "Pedro Aguirre Cerda, Santiago"
-  },
-  {
-    "id": 2,
-    "nombre": "Festival Corporativo TechCorp",
-    "tipo": "corporativo",
-    "descripcion": "Evento corporativo con toro mecánico y juegos inflables para empleados y sus familias. Un día de team building inolvidable.",
-    "fecha": "2026-01-20",
-    "imagenes": ["evento2.jpg"],
-    "ubicacion": "Centro de Eventos Santiago"
-  },
-  {
-    "id": 3,
-    "nombre": "Feria Comunitaria La Florida",
-    "tipo": "festival",
-    "descripcion": "Feria vecinal con múltiples juegos inflables y carros gastronómicos. Cientos de familias disfrutaron de un día completo de entretenimiento.",
-    "fecha": "2026-01-25",
-    "imagenes": ["evento3.jpg"],
-    "ubicacion": "Plaza La Florida"
   }
+
 ]

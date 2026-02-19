@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -108,22 +109,30 @@
       </div>
       <div class="categorias-grid">
         <div class="categoria-card inflables" onclick="window.location.href='catalogo.html?categoria=inflables'">
-          <div class="categoria-icon">🎈</div>
+          <div class="categoria-icon">
+            <i data-lucide="balloon"></i>
+          </div>
           <h3>Juegos Inflables</h3>
           <p>Toboganes, castillos y más</p>
         </div>
         <div class="categoria-card mecanicos" onclick="window.location.href='catalogo.html?categoria=mecanicos'">
-          <div class="categoria-icon">🎢</div>
+          <div class="categoria-icon">
+            <i data-lucide="roller-coaster"></i>
+          </div>
           <h3>Juegos Mecánicos</h3>
           <p>Toro mecánico, reloj derribador</p>
         </div>
         <div class="categoria-card interior" onclick="window.location.href='catalogo.html?categoria=interior'">
-          <div class="categoria-icon">🎮</div>
+          <div class="categoria-icon">
+            <i data-lucide="gamepad-2"></i>
+          </div>
           <h3>Juegos de Salón</h3>
           <p>Arcade, taca-taca, hockey</p>
         </div>
         <div class="categoria-card carros" onclick="window.location.href='catalogo.html?categoria=carros'">
-          <div class="categoria-icon">🍔</div>
+          <div class="categoria-icon">
+            <i data-lucide="popcorn"></i>
+          </div>
           <h3>Carros Gastronómicos</h3>
           <p>Algodón de azúcar, cabritas</p>
         </div>
@@ -446,5 +455,11 @@
       cargarEventosIndex();
     });
   </script>
+
+  <script>
+  lucide.createIcons();
+</script>
+
+
 </body>
 </html>
