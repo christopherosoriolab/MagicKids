@@ -122,7 +122,7 @@
     "categoria": "mecanicos",
     "precio": 140000,
     "descripcion": "Clásico juego de habilidad donde los niños intentan no caer por las agujas del reloj. ¡Muy competitivo y entretenido!. Duración de 3 horas.",
-    "medidas": "2m de diametro",
+    "medidas": "6m Ancho x 6m Profundo",
     "imagenes": ["reloj1.jpg", "reloj2.jpg", "reloj3.jpeg"]
   },
   {
@@ -150,7 +150,7 @@
     "categoria": "inflables",
     "precio": 80000,
     "descripcion": "Tobogán doble de estilo Disney con rampas y diseños emocionantes. Para los más aventureros. Duración de 5 horas.",
-    "medidas": "9m Largo x 4m Ancho x 8m Alto",
+    "medidas": "4m Ancho x 9m Largo x 8m Alto",
     "imagenes": ["disney1.jpeg", "disney2.jpeg", "disney3.jpeg"]
   },
 
@@ -162,5 +162,15 @@
     "descripcion": "3 juegos de interior para tu evento; Arcade, Taca-Taca y Hockey . Duración de 5 horas.",
     "medidas": "",
     "imagenes": [ "arcade1.jpeg", "hockey2.jpeg", "tacataca1.jpeg"]
+  },
+
+  {
+    "id": 19,
+    "nombre": "Tobogán Mini Castillo",
+    "categoria": "inflables",
+    "precio": 40000,
+    "descripcion": "Mini Castillo inflable con tobogán externo. Diseño para los niños mas pequeños. Duración de 5 horas.",
+    "medidas": "3m Ancho x 4m Largo x 2m Alto",
+    "imagenes": [ "castillo-mini1.jpeg", "castillo-mini2.jpeg", "castillo-mini3.jpeg"]
   }
 ]
