@@ -258,8 +258,8 @@
         <button class="filtro-btn" onclick="filtrarEventos('festival')" data-filter="festival">
           <span>🎪</span> Festivales
         </button>
-        <button class="filtro-btn" onclick="filtrarEventos('familiar')" data-filter="familiar">
-          <span>👨‍👩‍👧‍👦</span> Familiar
+        <button class="filtro-btn" onclick="filtrarEventos('colegios')" data-filter="colegios">
+          <span>🏫</span> Colegios
         </button>
       </div>
 
@@ -386,9 +386,9 @@
           <p style="color: var(--gray); line-height: 1.8;">Gran variedad de juegos y carros gastronómicos para eventos masivos y celebraciones comunitarias.</p>
         </div>
         <div style="text-align: center; padding: 2.5rem; background: var(--light); border-radius: 16px; transition: all 0.3s ease;">
-          <div style="font-size: 4rem; margin-bottom: 1.5rem;">👨‍👩‍👧‍👦</div>
-          <h3 style="color: var(--dark); margin-bottom: 1rem;">Eventos Familiares</h3>
-          <p style="color: var(--gray); line-height: 1.8;">Baby showers, bautizos, reuniones familiares y cualquier celebración donde la diversión sea protagonista.</p>
+          <div style="font-size: 4rem; margin-bottom: 1.5rem;">🏫</div>
+          <h3 style="color: var(--dark); margin-bottom: 1rem;">Colegios</h3>
+          <p style="color: var(--gray); line-height: 1.8;">Celebraciones escolares, aniversarios, fiestas de fin de año y actividades recreativas con juegos inflables y dinámicas seguras para todas las edades.</p>
         </div>
       </div>
     </div>
@@ -480,21 +480,21 @@
           cumpleanos: 'Cumpleaños',
           corporativo: 'Corporativo',
           festival: 'Festival',
-          familiar: 'Familiar'
+          colegios: 'Colegios'
         };
         
         const tipoIconos = {
           cumpleanos: '🎂',
           corporativo: '🏢',
           festival: '🎪',
-          familiar: '👨‍👩‍👧‍👦'
+          colegios: '🏫'
         };
         
         const tipoColores = {
           cumpleanos: '37, 99, 235',
           corporativo: '249, 115, 22',
           festival: '16, 185, 129',
-          familiar: '245, 158, 11'
+          colegios: '245, 158, 11'
         };
         
         const eventoCard = document.createElement('div');
@@ -526,7 +526,7 @@
             </div>
             <p class="evento-descripcion">${evento.descripcion}</p>
             <div class="evento-footer">
-              <a href="https://wa.me/56912345678?text=${encodeURIComponent('Hola, vi su evento: ' + evento.nombre + ' y me interesa cotizar algo similar.')}" class="evento-ver-mas" target="_blank">
+              <a href="https://wa.me/56963160639?text=${encodeURIComponent('Hola, vi su evento: ' + evento.nombre + ' y me interesa cotizar algo similar.')}" class="evento-ver-mas" target="_blank">
                 <span>💬</span> Cotizar Similar
               </a>
             </div>

@@ -1,12 +1,34 @@
 [
   {
     "id": 1,
-    "nombre": "18 de septiembre - Municipalidad de Pedro Aguirre Cerda",
+    "nombre": "Vacaciones de invierno - Municipalidad",
     "tipo": "festival",
-    "descripcion": "Increíble fiesta infantil con tobogán acuático Palmera. Los niños lo pasaron genial durante toda la tarde con juegos y actividades.",
-    "fecha": "2025-09-17",
-    "imagenes": ["eventopac.jpeg"],
+    "descripcion": "Evento recreativo organizado en conjunto con la municipalidad, ofreciendo juegos inflables, mecánicos y carros gastronómicos para que niños y familias disfrutaran unas vacaciones de invierno llenas de diversión y entretenimiento seguro.",
+    "fecha": "2025-06-30",
+    "imagenes": ["evento1.jpeg"],
+    "ubicacion": "Pedro Aguirre Cerda, Santiago"
+  },
+
+  {
+    "id": 2,
+    "nombre": "18 de septiembre - INACAP",
+    "tipo": "corporativo",
+    "descripcion": "Celebración dieciochera institucional con juegos mecánicos, inflables y activaciones recreativas, creando un ambiente festivo y participativo para estudiantes y colaboradores durante las Fiestas Patrias.",
+    "fecha": "2025-09-15",
+    "imagenes": ["evento2.jpeg"],
+    "ubicacion": "San Ramón, Santiago"
+  },
+
+  {
+    "id": 3,
+    "nombre": "Día del alumno - Colegio",
+    "tipo": "colegios",
+    "descripcion": "Jornada especial dedicada a los estudiantes con juegos inflables, dinámicas recreativas y actividades seguras adaptadas a cada nivel educativo, promoviendo la convivencia y el entretenimiento escolar.",
+    "fecha": "2025-05-12",
+    "imagenes": ["evento3.jpeg"],
     "ubicacion": "Pedro Aguirre Cerda, Santiago"
   }
+
+
 
 ]

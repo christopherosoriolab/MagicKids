@@ -231,29 +231,39 @@
     // ==============================
     function aplicarFiltroURL() {
       const params = new URLSearchParams(window.location.search);
-      const categoria = params.get("categoria");
+      let categoria = params.get("categoria");
 
-      if (!categoria) {
+      // Lista blanca de categorías permitidas
+      const categoriasValidas = ["inflables", "mecanicos", "interior", "carros"];
+
+      // Normalizar (evita errores por mayúsculas)
+      if (categoria) {
+        categoria = categoria.toLowerCase();
+      }
+
+      // Validación real
+      if (!categoria || !categoriasValidas.includes(categoria)) {
         actualizarTitulo('Todos los Productos', 'Explora nuestra colección completa');
         renderizar(productosGlobal);
         return;
       }
 
-      const nombreCategoria = {
-        'inflables': 'Juegos Inflables',
-        'mecanicos': 'Juegos Mecánicos',
-        'interior': 'Juegos de Salón',
-        'carros': 'Carros Gastronómicos'
-      }[categoria] || 'Productos';
+      // Diccionarios seguros
+      const nombres = {
+        inflables: 'Juegos Inflables',
+        mecanicos: 'Juegos Mecánicos',
+        interior: 'Juegos de Salón',
+        carros: 'Carros Gastronómicos'
+      };
 
-      const descripcionCategoria = {
-        'inflables': 'Toboganes, castillos y juegos inflables para todas las edades',
-        'mecanicos': 'Juegos mecánicos emocionantes para tu evento',
-        'interior': 'Entretenimiento para espacios cerrados',
-        'carros': 'Carros gastronómicos para deleitar a tus invitados'
-      }[categoria] || 'Nuestra selección de productos';
+      const descripciones = {
+        inflables: 'Toboganes, castillos y juegos inflables para todas las edades',
+        mecanicos: 'Juegos mecánicos emocionantes para tu evento',
+        interior: 'Entretenimiento para espacios cerrados',
+        carros: 'Carros gastronómicos para deleitar a tus invitados'
+      };
 
-      actualizarTitulo(nombreCategoria, descripcionCategoria);
+      actualizarTitulo(nombres[categoria], descripciones[categoria]);
 
       const filtrados = productosGlobal.filter(p => p.categoria === categoria);
       renderizar(filtrados);
