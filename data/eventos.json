@@ -27,6 +27,27 @@
     "fecha": "2025-05-12",
     "imagenes": ["evento3.jpeg"],
     "ubicacion": "Pedro Aguirre Cerda, Santiago"
+  },
+
+  {
+    "id": 4,
+    "nombre": "Día del niño - Colegio",
+    "tipo": "colegios",
+    "descripcion": "Jornada especial dedicada a los estudiantes con juegos inflables, dinámicas recreativas y actividades seguras adaptadas a cada nivel educativo, promoviendo la convivencia y el entretenimiento escolar.",
+    "fecha": "2025-08-10",
+    "imagenes": ["evento4.jpeg"],
+    "ubicacion": "Puente alto, Santiago"
+  },
+
+  {
+
+    "id": 5,
+    "nombre": "Aniversario - Colegio",
+    "tipo": "colegios",
+    "descripcion": "Jornada especial dedicada a los estudiantes con juegos inflables, dinámicas recreativas y actividades seguras adaptadas a cada nivel educativo, promoviendo la convivencia y el entretenimiento escolar.",
+    "fecha": "2025-10-05",
+    "imagenes": ["evento5.jpeg"],
+    "ubicacion": "San Bernardo, Santiago"
   }
 
 

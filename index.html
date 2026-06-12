@@ -17,10 +17,7 @@
     <div class="loader-spinner"></div>
   </div>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/56963160639" class="whatsapp-float" target="_blank">
-    <i>💬</i>
-  </a>
+ 
 
   <!-- HEADER -->
   <header class="navbar" id="navbar">
@@ -43,6 +40,7 @@
           <a href="catalogo.html?categoria=mecanicos">Juegos Mecánicos</a>
           <a href="catalogo.html?categoria=interior">Juegos de Salón</a>
           <a href="catalogo.html?categoria=carros">Carros Gastronómicos</a>
+          <a href="catalogo.html?categoria=otros">Otros</a>
         </div>
       </div>
 
@@ -51,12 +49,31 @@
       <a href="contacto.html" class="nav-link">Contacto</a>
     </nav>
 
-    <div class="nav-right">
-      <a href="https://wa.me/56963160639" class="btn-whatsapp" target="_blank">
-        <span>WhatsApp</span>
-      </a>
-    </div>
+
+
+
+
+
+
+    <button class="btn-whatsapp" onclick="enviarWhatsApp()">
+      <span>WhatsApp</span>
+    </button>
+
+    <script>
+      function enviarWhatsApp() {
+        const telefono = "56963160639";
+        const mensaje = "Hola, vengo desde el sitio web de MagicKids";
+        const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, '_blank');
+        }
+    </script>
+
+
   </header>
+
+  
+
+  
 
   
   <!-- HERO SECTION -->
@@ -210,7 +227,7 @@
         <div class="footer-col">
           <h3>Contacto</h3>
           <div class="footer-contacto">
-            <p>📱 +56 9 6316 0639</p>
+            <p>📱 producciones_magickids</p>
             <p>✉️ contacto@magickids.cl</p>
             <p>📍 Santiago, Chile</p>
           </div>
@@ -272,7 +289,7 @@
       
       // ===== MÉTODO 1: SELECCIONAR POR IDs ESPECÍFICOS (RECOMENDADO) =====
       // Cambia estos IDs por los de los productos que quieras mostrar
-      const idsDestacados = [1, 4, 9, 13]; // IDs de los productos que quieres mostrar
+      const idsDestacados = [9, 3, 13, 15]; // IDs de los productos que quieres mostrar
     
       // Filtrar productos manteniendo el orden de los IDs
       const destacados = idsDestacados

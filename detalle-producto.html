@@ -9,6 +9,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
+
+
+      /* Reemplaza o agrega esto en tu CSS */
+.comuna-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px;
+  font-weight: 600; /* Texto más negrito */
+  font-size: 0.83rem;
+  color: #1f2937;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.comuna-item:hover {
+  background: #f8fafc;
+}
+
+.comuna-nombre {
+  font-weight: 600;
+}
+
+.comuna-precio {
+  font-weight: 700; /* Precio más negrito */
+  color: #059669; /* Verde dinero (o usa #2563eb para azul) */
+  background: #ecfdf5;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap; /* Evita que el precio se parta */
+}
+
+
+
+
+
+
+
     /* Loader mínimo */
     #loader {
       position: fixed;
@@ -81,10 +120,7 @@
     <div class="loader-spinner"></div>
   </div>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/56963160639" class="whatsapp-float" target="_blank">
-    <i>💬</i>
-  </a>
+
 
   <!-- HEADER -->
   <header class="navbar" id="navbar">
@@ -104,6 +140,7 @@
           <a href="catalogo.html?categoria=mecanicos">Juegos Mecánicos</a>
           <a href="catalogo.html?categoria=interior">Juegos de Salón</a>
           <a href="catalogo.html?categoria=carros">Carros Gastronómicos</a>
+          <a href="catalogo.html?categoria=otros">Otros</a>
         </div>
       </div>
       <a href="quienes-somos.html" class="nav-link">Quiénes Somos</a>
@@ -111,7 +148,18 @@
       <a href="contacto.html" class="nav-link">Contacto</a>
     </nav>
     <div class="nav-right">
-      <a href="https://wa.me/56963160639" class="btn-whatsapp" target="_blank">WhatsApp</a>
+      <button class="btn-whatsapp" onclick="enviarWhatsApp()">
+      <span>WhatsApp</span>
+    </button>
+
+    <script>
+      function enviarWhatsApp() {
+        const telefono = "56963160639";
+        const mensaje = "Hola, vengo desde el sitio web de MagicKids";
+        const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, '_blank');
+        }
+    </script>
     </div>
   </header>
 
@@ -151,20 +199,267 @@
 
 
             <a href="#" id="btn-cotizar" class="btn-cotizar" target="_blank">
-              💬 Cotizar Ahora
+              💬 Reservar ahora
             </a>
 
             <div class="requisitos">
-              <h3>Requisitos de Instalación</h3>
-              <div class="requisito-item">
-                <span class="requisito-icono">✓</span>
-                <span class="requisito-texto">Espacio mínimo según las medidas</span>
+            <details>
+              <summary class="requisitos-header">
+                <h3>Requisitos de Instalación</h3>
+                <span class="toggle-icon">+</span>
+              </summary>
+              <div class="requisitos-content">
+                <div class="requisito-item">
+                  <span class="requisito-icono">✓</span>
+                  <span class="requisito-texto">Espacio mínimo según las medidas.</span>
+                </div>
+                <div class="requisito-item">
+                  <span class="requisito-icono">✓</span>
+                  <span class="requisito-texto">Superficie plana y segura.</span>
+                </div>
+                <div class="requisito-item">
+                  <span class="requisito-icono">✓</span>
+                  <span class="requisito-texto">Accesos libres y despejados.</span>
+                </div>
+                <div class="requisito-item">
+                  <span class="requisito-icono">✓</span>
+                  <span class="requisito-texto">Para juegos (ACUÁTICOS) no instalamos en tierra.</span>
+                </div>
+                <div class="requisito-item">
+                  <span class="requisito-icono">✓</span>
+                  <span class="requisito-texto">Para juegos (ACUÁTICOS) toma de agua y manguera.</span>
+                </div>
               </div>
-              <div class="requisito-item">
-                <span class="requisito-icono">✓</span>
-                <span class="requisito-texto">Superficie plana y segura</span>
+            </details>
+
+
+
+            <details >
+              <summary class="requisitos-header">
+                <h3>Equipamiento y Servicio</h3>
+                <span class="toggle-icon">+</span>
+              </summary>
+              <div class="requisitos-content">
+                <div class="requisito-item">
+                  <span class="requisito-icono">✓</span>
+                  <span class="requisito-texto">Turbina de aire.</span>
+                </div>
+                <div class="requisito-item">
+                  <span class="requisito-icono">✓</span>
+                  <span class="requisito-texto">Extencion de 20 metros.</span>
+                </div>
+                <div class="requisito-item">
+                  <span class="requisito-icono">✓</span>
+                  <span class="requisito-texto">Lona en caso de que lo requiera.</span>
+                </div>
+                <div class="requisito-item">
+                  <span class="requisito-icono">✓</span>
+                  <span class="requisito-texto">Estacas en caso de que lo requiera.</span>
+                </div>
               </div>
-            </div>
+            </details>
+
+            <details>
+              <summary class="requisitos-header">
+                <h3>Valor de traslado</h3>
+                <span class="toggle-icon">+</span>
+              </summary>
+              <div class="comunas-content">
+                <ul class="comunas-list">
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 San Bernardo</span>
+                    <span class="comuna-precio">$5.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 El Bosque</span>
+                    <span class="comuna-precio">$5.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 La Pintana</span>
+                    <span class="comuna-precio">$5.000</span>
+                  </li>
+
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Lo Espejo</span>
+                    <span class="comuna-precio">$6.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 La Cisterna</span>
+                    <span class="comuna-precio">$6.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 La Granja</span>
+                    <span class="comuna-precio">$6.000</span>
+                  </li>
+
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Calera de Tango</span>
+                    <span class="comuna-precio">$7.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Cerrillos</span>
+                    <span class="comuna-precio">$7.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 San Joaquín</span>
+                    <span class="comuna-precio">$7.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 San Miguel</span>
+                    <span class="comuna-precio">$7.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 San Ramón</span>
+                    <span class="comuna-precio">$7.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Estacion Central</span>
+                    <span class="comuna-precio">$8.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Independencia</span>
+                    <span class="comuna-precio">$8.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 La florida</span>
+                    <span class="comuna-precio">$8.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Lo Prado</span>
+                    <span class="comuna-precio">$8.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Macul</span>
+                    <span class="comuna-precio">$8.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Pedro Aguirre Cerda</span>
+                    <span class="comuna-precio">$8.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Peñalolén</span>
+                    <span class="comuna-precio">$8.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Puente Alto</span>
+                    <span class="comuna-precio">$8.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Santiago (Centro)</span>
+                    <span class="comuna-precio">$8.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Conchalí</span>
+                    <span class="comuna-precio">$10.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 La Reina</span>
+                    <span class="comuna-precio">$10.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Maipú</span>
+                    <span class="comuna-precio">$10.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 ÑuÑoa</span>
+                    <span class="comuna-precio">$10.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Quinta Normal</span>
+                    <span class="comuna-precio">$10.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Recoleta</span>
+                    <span class="comuna-precio">$10.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Buin</span>
+                    <span class="comuna-precio">$12.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Cerro Navia</span>
+                    <span class="comuna-precio">$12.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Huechuraba</span>
+                    <span class="comuna-precio">$12.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Pirque</span>
+                    <span class="comuna-precio">$12.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Las condes</span>
+                    <span class="comuna-precio">$15.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Paine</span>
+                    <span class="comuna-precio">$15.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Providencia</span>
+                    <span class="comuna-precio">$15.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Renca</span>
+                    <span class="comuna-precio">$15.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Vitacura</span>
+                    <span class="comuna-precio">$15.000</span>
+                  </li>
+
+                  <li class="comuna-item">
+                    <span class="comuna-nombre">📍 Lo Barnechea</span>
+                    <span class="comuna-precio">$20.000</span>
+                  </li>
+              
+                  
+                </ul>
+              </div>
+            </details>
+
+          </div>
+
+
+
+
+
           </div>
         </div>
       </div>
@@ -210,7 +505,7 @@
         <div class="footer-col">
           <h3>Contacto</h3>
           <div class="footer-contacto">
-            <p>📱 +56 9 6316 0639</p>
+            <p>📱 producciones_magickids</p>
             <p>✉️ contacto@magickids.cl</p>
             <p>📍 Santiago, Chile</p>
           </div>
@@ -274,7 +569,8 @@
         'inflables': '🎈 Juego Inflable',
         'mecanicos': '🎢 Juego Mecánico',
         'interior': '🎮 Juego de Salón',
-        'carros': '🍔 Carro Gastronómico'
+        'carros': '🍔 Carro Gastronómico',
+        'otros': 'Otros'
       };
       // Agregar espacio después de los dos puntos
       document.getElementById('categoria-texto').textContent = ` ${categorias[producto.categoria] || producto.categoria}`;
@@ -332,12 +628,12 @@
       if (btnCotizar) {
         if (disponible) {
           const mensaje = `Hola! Quiero cotizar el siguiente producto:\n\n` +
-                          `🎮 Producto: ${producto.nombre}\n` +
-                          `💰 Precio: $${producto.precio.toLocaleString('es-CL')}\n` +
-                          `🏷️ Categoría: ${categorias[producto.categoria] || producto.categoria}`;
+                          `${producto.nombre}\n` +
+                          `, con un valor de: $${producto.precio.toLocaleString('es-CL')}\n` +
+                          `, para la fecha: `;
           
           btnCotizar.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
-          btnCotizar.textContent = '💬 Cotizar Ahora';
+          btnCotizar.textContent = '💬 Reservar Ahora';
           btnCotizar.className = 'btn-cotizar';
         } else {
           const mensaje = `Hola! Vi que el producto "${producto.nombre}" no está disponible. ¿Tienen alternativas similares?`;

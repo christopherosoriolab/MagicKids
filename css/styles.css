@@ -297,6 +297,7 @@ img {
   align-items: center;
   gap: 0.5rem;
   font-weight: 600;
+   float: right;
 }
 .btn-whatsapp:hover {
   background: #128c7e;
@@ -1334,36 +1335,6 @@ url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100"
   font-weight: 600;
 }
 
-/* ========================================
-💬 16. WHATSAPP FLOATING BUTTON (Global)
-======================================== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: #25d366;
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-lg);
-  z-index: 999;
-  font-size: 2rem;
-  transition: var(--transition);
-  animation: pulse 2s infinite;
-}
-.whatsapp-float:hover {
-  transform: scale(1.1) rotate(15deg);
-  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
-}
-
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-  50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-}
 
 /* ========================================
 ⏳ 17. LOADER (Global)
@@ -1650,5 +1621,77 @@ url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100"
   .eventos-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
+  }
+}
+
+
+
+/* Estilos básicos */
+.requisitos details {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.requisitos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  cursor: pointer;
+  list-style: none; /* Oculta el triángulo por defecto */
+}
+
+.requisitos-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  transition: transform 0.3s;
+}
+
+details[open] .toggle-icon {
+  transform: rotate(45deg); /* Cambia + a × */
+}
+
+.requisitos-content {
+  padding: 15px 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.requisito-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.requisito-item:last-child {
+  border-bottom: none;
+}
+
+.requisito-icono {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Ocultar el triángulo por defecto del summary */
+.requisitos summary::-webkit-details-marker {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .btn-whatsapp {
+    display: none;
   }
 }

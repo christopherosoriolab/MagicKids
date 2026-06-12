@@ -83,17 +83,12 @@
       font-weight: bold;
     }
     .contact-card.whatsapp .contact-icon {
-      background: linear-gradient(135deg, #25d366, #128c7e);
+      background: linear-gradient(135deg, #9900ff, #ff2600, #ffd900);
     }
     .contact-card.email .contact-icon {
       background: linear-gradient(135deg, #ef4444, #dc2626);
     }
-    .contact-card.phone .contact-icon {
-      background: linear-gradient(135deg, #f59e0b, #d97706);
-    }
-    .contact-card.location .contact-icon {
-      background: linear-gradient(135deg, #10b981, #0ea5e9);
-    }
+
     .contact-card h3 {
       color: var(--dark);
       margin-bottom: 0.75rem;
@@ -285,11 +280,7 @@
     <div class="loader-spinner"></div>
   </div>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/56963160639" class="whatsapp-float" target="_blank">
-    <i>💬</i>
-  </a>
-
+ 
   <!-- HEADER -->
   <header class="navbar" id="navbar">
     <div class="nav-left">
@@ -308,6 +299,7 @@
           <a href="catalogo.html?categoria=mecanicos">Juegos Mecánicos</a>
           <a href="catalogo.html?categoria=interior">Juegos de Salón</a>
           <a href="catalogo.html?categoria=carros">Carros Gastronómicos</a>
+          <a href="catalogo.html?categoria=otros">Otros</a>
         </div>
       </div>
       <a href="quienes-somos.html" class="nav-link">Quiénes Somos</a>
@@ -315,7 +307,18 @@
       <a href="contacto.html" class="nav-link">Contacto</a>
     </nav>
     <div class="nav-right">
-      <a href="https://wa.me/56912345678" class="btn-whatsapp" target="_blank">WhatsApp</a>
+      <button class="btn-whatsapp" onclick="enviarWhatsApp()">
+      <span>WhatsApp</span>
+    </button>
+
+    <script>
+      function enviarWhatsApp() {
+        const telefono = "56963160639";
+        const mensaje = "Hola, vengo desde el sitio web de MagicKids";
+        const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, '_blank');
+        }
+    </script>
     </div>
   </header>
 
@@ -335,17 +338,12 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
         <div class="contact-card whatsapp">
           <div class="contact-icon">📱</div>
-          <h3>WhatsApp</h3>
-          <p style="margin-bottom: 0.5rem;">Contáctanos directamente</p>
-          <a href="https://wa.me/56963160639" target="_blank" style="font-size: 1.2rem;">+56 9 6316 0639</a>
+          <h3>Instagram</h3>
+          <p style="margin-bottom: 0.5rem;">Conoce nuesto feed</p>
+          <a href="https://www.instagram.com/producciones_magickids?igsh=bTU0ZTY0cDFxejJz" target="_blank" style="font-size: 1.2rem;">Producciones_MagicKids</a>
         </div>
         
-        <div class="contact-card phone">
-          <div class="contact-icon">📞</div>
-          <h3>Teléfono</h3>
-          <p style="margin-bottom: 0.5rem;">Llámanos sin problema</p>
-          <a href="tel:+56963160639" style="font-size: 1.2rem;">+56 9 6316 0639</a>
-        </div>
+       
         
         <div class="contact-card email">
           <div class="contact-icon">✉️</div>
@@ -363,15 +361,15 @@
         <div class="horarios-grid">
           <div class="horario-item">
             <span class="horario-dia">Lunes - Viernes</span>
-            <span class="horario-hora">11:00 - 20:00</span>
+            <span class="horario-hora">24hrs</span>
           </div>
           <div class="horario-item">
             <span class="horario-dia">Sábado</span>
-            <span class="horario-hora">10:00 - 23:00</span>
+            <span class="horario-hora">24hrs</span>
           </div>
           <div class="horario-item">
             <span class="horario-dia">Domingo</span>
-            <span class="horario-hora">10:00 - 23:00</span>
+            <span class="horario-hora">24hrs</span>
           </div>
         </div>
       </div>
@@ -406,7 +404,7 @@
         <div class="footer-col">
           <h3>Contacto</h3>
           <div class="footer-contacto">
-            <p>📱 +56 9 6316 0639</p>
+            <p>📱 producciones_magickids</p>
             <p>✉️ contacto@magickids.cl</p>
             <p>📍 Santiago, Chile</p>
           </div>

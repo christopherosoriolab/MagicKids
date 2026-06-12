@@ -24,7 +24,7 @@
     "precio": 70000,
     "descripcion": "Clásico tobogán con arco de colores vibrantes. Seguro y resistente para horas de diversión garantizada. Duración de 5 horas.",
     "medidas": "5m Ancho x 7m Largo x 5m Alto",
-    "imagenes": ["arco1.jpg", "arco2.jpg", "arco3.jpeg"]
+    "imagenes": ["arco1.jpeg", "arco2.jpeg", "arco3.jpg"]
   },
   {
     "id": 4,
@@ -33,17 +33,9 @@
     "precio": 110000,
     "descripcion": "¡El tobogán más grande de nuestra colección! Diseño temático de dulces y colores vibrantes. Ideal para eventos grandes. Duración de 5 horas.",
     "medidas": "5m Ancho x 10m Largo x 7m Alto",
-    "imagenes": ["candy1.jpg", "candy2.jpg", "candy3.jpg"]
+    "imagenes": ["candy1.jpeg", "candy2.jpg", "candy3.jpg"]
   },
-  {
-    "id": 5,
-    "nombre": "Tobogán Castillo",
-    "categoria": "inflables",
-    "precio": 70000,
-    "descripcion": "Castillo inflable con tobogán integrado. Diseño que transporta a los niños a un mundo de fantasía y aventura. Duración de 5 horas.",
-    "medidas": "5m Ancho x 7m Largo x 6m Alto",
-    "imagenes": ["castillo1.jpg", "castillo2.jpeg", "castillo3.jpeg"]
-  },
+  
   {
     "id": 6,
     "nombre": "Tobogán acuático Danger",
@@ -51,7 +43,7 @@
     "precio": 80000,
     "descripcion": "Tobogán acuático de estilo extremo con rampas y curvas emocionantes. Para los más aventureros. Duración de 5 horas.",
     "medidas": "3m Ancho x 8m Largo x 4,5m Alto",
-    "imagenes": ["danger1.jpg", "danger2.jpeg", "danger3.jpeg"]
+    "imagenes": ["danger1.jpeg", "danger2.jpeg", "danger3.jpeg"]
   },
   {
     "id": 7,
@@ -60,7 +52,7 @@
     "precio": 70000,
     "descripcion": "Encantador tobogán temático de Los Pitufos. Diseño colorido y seguro para los más pequeños. Duración de 5 horas.",
     "medidas": "4m Ancho x 7m Largo x 7m Alto",
-    "imagenes": ["pitufo1.jpg", "pitufo2.jpeg", "pitufo3.jpeg"]
+    "imagenes": ["pitufo1.jpeg", "pitufo2.jpeg", "pitufo3.jpeg"]
   },
   {
     "id": 8,
@@ -69,7 +61,7 @@
     "precio": 70000,
     "descripcion": "Alegre tobogán con diseño de payaso sonriente. Siempre un éxito en cumpleaños infantiles. Duración de 5 horas.",
     "medidas": "5m Ancho x 5m Largo x 6m Alto",
-    "imagenes": ["payaso1.jpg", "payaso2.jpeg", "payaso3.jpeg"]
+    "imagenes": ["payaso1.jpeg", "payaso2.jpeg", "payaso3.jpeg"]
   },
   {
     "id": 9,
@@ -105,7 +97,7 @@
     "precio": 60000,
     "descripcion": "Tobogán clásico con diseño de sol radiante. Simple, seguro y siempre divertido. Duración de 5 horas.",
     "medidas": "4,5m Ancho x 5m Largo x 6m Alto",
-    "imagenes": ["sol1.jpg", "sol2.jpeg", "sol3.jpeg"]
+    "imagenes": ["sol1.jpeg", "sol2.jpeg", "sol3.jpeg"]
   },
   {
     "id": 13,
@@ -141,7 +133,7 @@
     "precio": 120000,
     "descripcion": "Carro gourmet versátil para servir; HotDogs, Completos, Hamburguesas y mas. Estructura elegante con toldo y mostrador de servicio. Duración de 3 horas.",
     "medidas": "2m Ancho x 1,2m Largo x 2m Alto",
-    "imagenes": ["carro-gastronomico1.jpg", "carro-gastronomico2.jpg", "carro-gastronomico3.jpg"]
+    "imagenes": ["carro-gastronomico3.jpg", "carro-gastronomico2.jpg"]
   },
 
   {
@@ -172,5 +164,25 @@
     "descripcion": "Mini Castillo inflable con tobogán externo. Diseño para los niños mas pequeños. Duración de 5 horas.",
     "medidas": "3m Ancho x 4m Largo x 2m Alto",
     "imagenes": [ "castillo-mini1.jpeg", "castillo-mini2.jpeg", "castillo-mini3.jpeg"]
+  },
+
+  {
+    "id": 20,
+    "nombre": "Generador Bauker 6.000 watts",
+    "categoria": "otros",
+    "precio": 59990,
+    "descripcion": "Generador Bauker de 6.000 watts, preparado en caso de falta de electricidad en tu evento. Duración de 5 horas.",
+    "medidas": "",
+    "imagenes": [ "generador6000.jpeg"]
+  },
+
+  {
+    "id": 21,
+    "nombre": "Generador Bauker 3.000 watts",
+    "categoria": "otros",
+    "precio": 45000,
+    "descripcion": "Generador Bauker de 3.000 watts, preparado en caso de falta de electricidad en tu evento. Duración de 5 horas.",
+    "medidas": "",
+    "imagenes": [ "generador3000.jpeg"]
   }
 ]

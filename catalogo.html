@@ -16,10 +16,7 @@
     <div class="loader-spinner"></div>
   </div>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/56963160639" class="whatsapp-float" target="_blank">
-    <i>💬</i>
-  </a>
+
 
   <!-- HEADER -->
   <header class="navbar" id="navbar">
@@ -42,6 +39,7 @@
           <a href="catalogo.html?categoria=mecanicos">Juegos Mecánicos</a>
           <a href="catalogo.html?categoria=interior">Juegos de Salón</a>
           <a href="catalogo.html?categoria=carros">Carros Gastronómicos</a>
+          <a href="catalogo.html?categoria=otros">Otros</a>
         </div>
       </div>
 
@@ -51,9 +49,18 @@
     </nav>
 
     <div class="nav-right">
-      <a href="https://wa.me/56963160639" class="btn-whatsapp" target="_blank">
-        <span>WhatsApp</span>
-      </a>
+      <button class="btn-whatsapp" onclick="enviarWhatsApp()">
+      <span>WhatsApp</span>
+    </button>
+
+    <script>
+      function enviarWhatsApp() {
+        const telefono = "56963160639";
+        const mensaje = "Hola, vengo desde el sitio web de MagicKids";
+        const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, '_blank');
+        }
+    </script>
     </div>
   </header>
 
@@ -80,6 +87,7 @@
               <option value="mecanicos">Juegos Mecánicos</option>
               <option value="interior">Juegos de Salón</option>
               <option value="carros">Carros Gastronómicos</option>
+              <option value="otros">Otros</option>
             </select>
           </div>
           <!-- 
@@ -142,7 +150,7 @@
         <div class="footer-col">
           <h3>Contacto</h3>
           <div class="footer-contacto">
-            <p>📱 +56 9 6316 0639</p>
+            <p>📱 producciones_magickids</p>
             <p>✉️ contacto@magickids.cl</p>
             <p>📍 Santiago, Chile</p>
           </div>
@@ -234,7 +242,7 @@
       let categoria = params.get("categoria");
 
       // Lista blanca de categorías permitidas
-      const categoriasValidas = ["inflables", "mecanicos", "interior", "carros"];
+      const categoriasValidas = ["inflables", "mecanicos", "interior", "carros", "otros"];
 
       // Normalizar (evita errores por mayúsculas)
       if (categoria) {
@@ -253,14 +261,16 @@
         inflables: 'Juegos Inflables',
         mecanicos: 'Juegos Mecánicos',
         interior: 'Juegos de Salón',
-        carros: 'Carros Gastronómicos'
+        carros: 'Carros Gastronómicos',
+        otros: 'Otros'
       };
 
       const descripciones = {
         inflables: 'Toboganes, castillos y juegos inflables para todas las edades',
         mecanicos: 'Juegos mecánicos emocionantes para tu evento',
         interior: 'Entretenimiento para espacios cerrados',
-        carros: 'Carros gastronómicos para deleitar a tus invitados'
+        carros: 'Carros gastronómicos para deleitar a tus invitados',
+        otros:'Productos extras para cada evento'
       };
 
       actualizarTitulo(nombres[categoria], descripciones[categoria]);
@@ -352,7 +362,8 @@
           'inflables': 'badge-inflables',
           'mecanicos': 'badge-mecanicos',
           'interior': 'badge-interior',
-          'carros': 'badge-carros'
+          'carros': 'badge-carros',
+          'otros': 'badge-otros'
         }[p.categoria] || 'badge-inflables'
       : 'badge-no-disponible';
 
@@ -361,7 +372,8 @@
           'inflables': '🎈 Inflable',
           'mecanicos': '🎢 Mecánico',
           'interior': '🎮 Interior',
-          'carros': '🍔 Gastronómico'
+          'carros': '🍔 Gastronómico',
+          'otros': ' Otros'
         }[p.categoria] || 'Producto'
       : '❌ NO DISPONIBLE';
 
