@@ -8,6 +8,37 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- ESTILOS PARA LA IMAGEN FLOTANTE FIJA (Más grande y al tope) -->
+  <style>
+    .floating-image {
+      position: fixed;
+      bottom: 0; /* Pegado al tope de abajo */
+      right: 0;  /* Pegado al tope de la derecha */
+      width: 140px; /* Tamaño más grande */
+      height: auto;
+      z-index: 99999; /* Por encima de absolutamente todo */
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .floating-image:hover {
+      transform: scale(1.05); /* Efecto de agrandado suave al pasar el mouse */
+    }
+
+    /* Ajuste para celulares (sigue siendo grande pero adaptable) */
+    @media (max-width: 768px) {
+      .floating-image {
+        width: 100px;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  </style>
+
+
+  
   <style>
 
 
@@ -505,15 +536,18 @@
         <div class="footer-col">
           <h3>Contacto</h3>
           <div class="footer-contacto">
+            <p>📞 +569 6316 0639</p>
             <p>📱 producciones_magickids</p>
-            <p>✉️ produccionesmagickids@gmail.com</p>
+            <p>✉️ magickidseventoss@gmail.com</p>
             <p>📍 Santiago, Chile</p>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 MagicKids Producciones.</p>
-        <a href="https://wa.me/56937073605"><p>BY CHRISTOPHER IGNACIO OSORIO</p></a>
+        <a href="https://wa.me/56937073605" style="text-decoration: none; color: inherit;">
+          <p>BY CHRISTOPHER IGNACIO OSORIO</p>
+        </a>
       </div>
     </div>
   </footer>
@@ -675,5 +709,13 @@
       }
     }
   </script>
+
+  <!-- IMAGEN FLOTANTE FIJA (Esquina inferior derecha, más grande y al tope) -->
+  <!-- ⚠️ IMPORTANTE: Cambia "tu-imagen.png" por el nombre real de tu archivo PNG en tu carpeta -->
+  <a href="https://wa.me/56963160639" target="_blank" class="floating-link" title="Contáctanos por WhatsApp">
+    <img src="assents/imagenes/chavelito.png" alt="Botón flotante" class="floating-image">
+  </a>
+
+  
 </body>
 </html>

@@ -8,8 +8,45 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+
+
+
+
+  <!-- ESTILOS PARA LA IMAGEN FLOTANTE FIJA (Más grande y al tope) -->
   <style>
-    /* Loader mínimo */
+    .floating-image {
+      position: fixed;
+      bottom: 0; /* Pegado al tope de abajo */
+      right: 0;  /* Pegado al tope de la derecha */
+      width: 140px; /* Tamaño más grande */
+      height: auto;
+      z-index: 99999; /* Por encima de absolutamente todo */
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .floating-image:hover {
+      transform: scale(1.05); /* Efecto de agrandado suave al pasar el mouse */
+    }
+
+    /* Ajuste para celulares (sigue siendo grande pero adaptable) */
+    @media (max-width: 768px) {
+      .floating-image {
+        width: 100px;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  </style>
+
+
+
+  <style>
+    /* =========================================
+       LOADER
+       ========================================= */
     #loader {
       position: fixed;
       top: 0;
@@ -38,130 +75,86 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
-    /* Hero section con texto blanco */
+
+    /* =========================================
+       HERO SECTION
+       ========================================= */
     .contacto-hero h1,
     .contacto-hero p {
       color: white !important;
     }
-    /* Info cards */
-    .contact-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s ease;
-      text-align: center;
-      border-top: 4px solid var(--primary);
-    }
-    .contact-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-    }
-    .contact-card.whatsapp {
-      border-top-color: #25d366;
-    }
-    .contact-card.email {
-      border-top-color: #ef4444;
-    }
-    .contact-card.phone {
-      border-top-color: #f59e0b;
-    }
-    .contact-card.location {
-      border-top-color: #10b981;
-    }
-    .contact-icon {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, var(--primary), #7c3aed);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.25rem;
-      color: white;
-      font-size: 1.75rem;
-      font-weight: bold;
-    }
-    .contact-card.whatsapp .contact-icon {
-      background: linear-gradient(135deg, #9900ff, #ff2600, #ffd900);
-    }
-    .contact-card.email .contact-icon {
-      background: linear-gradient(135deg, #ef4444, #dc2626);
+
+    /* =========================================
+       TARJETAS DE CONTACTO (Limpio y sin duplicados)
+       ========================================= */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
     }
 
-    .contact-card h3 {
-      color: var(--dark);
-      margin-bottom: 0.75rem;
-      font-size: 1.25rem;
-    }
-    .contact-card p {
-      color: var(--gray);
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-    }
-    .contact-card a {
-      color: var(--primary);
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-    .contact-card a:hover {
-      color: var(--primary-dark);
-      text-decoration: underline;
-    }
-    /* Imagen destacada */
-    .contact-image-container {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    .contact-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    .contact-image-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(124, 58, 237, 0.8));
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      padding: 2rem;
+    .contact-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2.5rem 1.5rem;
       text-align: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f3f4f6;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .contact-image-container:hover .contact-image-overlay {
-      opacity: 1;
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     }
-    .contact-image-container:hover .contact-image {
-      transform: scale(1.1);
+
+    /* Círculo de fondo suave para el icono SVG */
+    .contact-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
     }
-    .contact-image-overlay h3 {
-      color: white !important;
-      font-size: 2rem;
+
+    /* Colores de fondo específicos para cada marca */
+    .contact-card.instagram .contact-icon { background-color: rgba(228, 64, 95, 0.1); }
+    .contact-card.email .contact-icon { background-color: rgba(37, 99, 235, 0.1); }
+    .contact-card.whatsapp .contact-icon { background-color: rgba(37, 211, 102, 0.1); }
+
+    .contact-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark, #1f2937); /* Fallback por si la variable no carga */
+    }
+
+    .contact-card p {
+      color: var(--gray, #6b7280);
+      font-size: 0.95rem;
       margin-bottom: 1rem;
     }
-    .contact-image-overlay p {
-      color: rgba(255, 255, 255, 0.9) !important;
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+
+    .contact-card a {
+      color: #374151;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      word-break: break-all;
+      transition: color 0.2s ease;
     }
-    /* Horarios */
+
+    /* Colores al pasar el mouse sobre el enlace */
+    .contact-card.instagram a:hover { color: #E4405F; }
+    .contact-card.email a:hover { color: #2563EB; }
+    .contact-card.whatsapp a:hover { color: #25D366; }
+
+    /* =========================================
+       HORARIOS
+       ========================================= */
     .horarios-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -172,103 +165,26 @@
       display: flex;
       justify-content: space-between;
       padding: 0.75rem 0;
-      border-bottom: 1px solid var(--light);
+      border-bottom: 1px solid var(--light, #e5e7eb);
     }
     .horario-item:last-child {
       border-bottom: none;
     }
     .horario-dia {
       font-weight: 600;
-      color: var(--dark);
+      color: var(--dark, #1f2937);
     }
     .horario-hora {
-      color: var(--primary);
+      color: var(--primary, #2563eb);
       font-weight: 600;
     }
-    /* Mapa placeholder */
-    .mapa-container {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      height: 450px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.5rem;
-      position: relative;
-    }
-    .map-placeholder {
-      text-align: center;
-      padding: 2rem;
-    }
-    .map-placeholder i {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-    .map-placeholder p {
-      font-size: 1.1rem;
-      margin-bottom: 0;
-    }
-    /* WhatsApp CTA grande */
-    .whatsapp-cta {
-      background: linear-gradient(135deg, #25d366, #128c7e);
-      padding: 3rem;
-      border-radius: 20px;
-      text-align: center;
-      color: white;
-      margin: 3rem 0;
-      box-shadow: var(--shadow-lg);
-    }
-    .whatsapp-cta h3 {
-      color: white !important;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .whatsapp-cta p {
-      color: rgba(255, 255, 255, 0.95) !important;
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .btn-whatsapp-large {
-      background: white;
-      color: #25d366;
-      padding: 1.25rem 3rem;
-      border-radius: 16px;
-      font-weight: 700;
-      font-size: 1.25rem;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    .btn-whatsapp-large:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    }
-    /* Responsive */
+
+    /* =========================================
+       RESPONSIVE
+       ========================================= */
     @media (max-width: 768px) {
-      .contacto-grid {
+      .contact-grid {
         grid-template-columns: 1fr !important;
-      }
-      .mapa-container {
-        height: 350px;
-      }
-      .whatsapp-cta {
-        padding: 2rem 1.5rem;
-      }
-      .whatsapp-cta h3 {
-        font-size: 1.5rem;
-      }
-      .whatsapp-cta p {
-        font-size: 1rem;
       }
     }
   </style>
@@ -280,7 +196,6 @@
     <div class="loader-spinner"></div>
   </div>
 
- 
   <!-- HEADER -->
   <header class="navbar" id="navbar">
     <div class="nav-left">
@@ -308,17 +223,8 @@
     </nav>
     <div class="nav-right">
       <button class="btn-whatsapp" onclick="enviarWhatsApp()">
-      <span>WhatsApp</span>
-    </button>
-
-    <script>
-      function enviarWhatsApp() {
-        const telefono = "56963160639";
-        const mensaje = "Hola, vengo desde el sitio web de MagicKids";
-        const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-        window.open(url, '_blank');
-        }
-    </script>
+        <span>WhatsApp</span>
+      </button>
     </div>
   </header>
 
@@ -334,30 +240,65 @@
   <section class="section">
     <div class="container">
       
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-        <div class="contact-card whatsapp">
-          <div class="contact-icon">📱</div>
+      <div class="contact-grid">
+        
+        <!-- Tarjeta de Instagram -->
+        <div class="contact-card instagram">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="url(#ig-gradient)">
+              <defs>
+                <linearGradient id="ig-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#feda75"/>
+                  <stop offset="25%" stop-color="#fa7e1e"/>
+                  <stop offset="50%" stop-color="#d62976"/>
+                  <stop offset="75%" stop-color="#962fbf"/>
+                  <stop offset="100%" stop-color="#4f5bd5"/>
+                </linearGradient>
+              </defs>
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </div>
           <h3>Instagram</h3>
-          <p style="margin-bottom: 0.5rem;">Conoce nuesto feed</p>
-          <a href="https://www.instagram.com/producciones_magickids?igsh=bTU0ZTY0cDFxejJz" target="_blank" style="font-size: 1.2rem;">Producciones_MagicKids</a>
+          <p>Conoce nuestro feed</p>
+          <a href="https://www.instagram.com/producciones_magickids?igsh=bTU0ZTY0cDFxejJz" target="_blank" rel="noopener noreferrer">
+            @Producciones_MagicKids
+          </a>
         </div>
         
-       
-        
+        <!-- Tarjeta de Correo -->
         <div class="contact-card email">
-          <div class="contact-icon">✉️</div>
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#2563EB">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
           <h3>Correo</h3>
-          <p style="margin-bottom: 0.5rem;">Escríbenos tu consulta</p>
-          <a href="mailto:contacto@magickids.cl" style="font-size: 1.1rem; word-break: break-all;">produccionesmagickids@gmail.com</a>
+          <p>Escríbenos tu consulta</p>
+          <a href="mailto:produccionesmagickids@gmail.com">
+            magickidseventoss@gmail.com
+          </a>
+        </div>
+
+        <!-- Tarjeta de WhatsApp -->
+        <div class="contact-card whatsapp">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#25D366">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>Contáctanos directamente</p>
+          <!-- Número actualizado al mismo que usas en el botón del header -->
+          <a href="https://wa.me/56963160639" target="_blank" rel="noopener noreferrer">
+            +56 9 6316 0639
+          </a>
         </div>
         
-       
       </div>
 
       <!-- Horarios -->
-      <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: var(--shadow-sm); margin-top: 3rem;">
-        <h3 style="color: var(--dark); margin-bottom: 1.5rem; text-align: center; font-size: 1.5rem;">Horarios de Atención</h3>
+      <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 3rem; border: 1px solid #f3f4f6;">
+        <h3 style="color: var(--dark, #1f2937); margin-bottom: 1.5rem; text-align: center; font-size: 1.5rem;">Horarios de Atención</h3>
         <div class="horarios-grid">
           <div class="horario-item">
             <span class="horario-dia">Lunes - Viernes</span>
@@ -373,13 +314,9 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
-
-
-
-
- 
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -404,21 +341,31 @@
         <div class="footer-col">
           <h3>Contacto</h3>
           <div class="footer-contacto">
+            <p>📞 +569 6316 0639</p>
             <p>📱 producciones_magickids</p>
-            <p>✉️ produccionesmagickids@gmail.com</p>
+            <p>✉️ magickidseventoss@gmail.com</p>
             <p>📍 Santiago, Chile</p>
           </div>
         </div>
-        
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 MagicKids Producciones.</p>
-        <a href="https://wa.me/56937073605"> <p > BY CHRISTOPHER IGNACIO OSORIO</p></a>
+        <a href="https://wa.me/56937073605" style="text-decoration: none; color: inherit;">
+          <p>BY CHRISTOPHER IGNACIO OSORIO</p>
+        </a>
       </div>
     </div>
   </footer>
 
   <script>
+    // Función WhatsApp del header
+    function enviarWhatsApp() {
+      const telefono = "56963160639";
+      const mensaje = "Hola, vengo desde el sitio web de MagicKids";
+      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    }
+
     // Ocultar loader
     setTimeout(() => {
       const loader = document.getElementById('loader');
@@ -444,5 +391,13 @@
       });
     }
   </script>
+
+  <!-- IMAGEN FLOTANTE FIJA (Esquina inferior derecha, más grande y al tope) -->
+  <!-- ⚠️ IMPORTANTE: Cambia "tu-imagen.png" por el nombre real de tu archivo PNG en tu carpeta -->
+  <a href="https://wa.me/56963160639" target="_blank" class="floating-link" title="Contáctanos por WhatsApp">
+    <img src="assents/imagenes/chavelito.png" alt="Botón flotante" class="floating-image">
+  </a>
+
+  
 </body>
 </html>
